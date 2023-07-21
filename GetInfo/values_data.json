@@ -1,0 +1,22 @@
+{
+    "PC": {
+        "Genres": {
+            "Action": "0",
+            "Adventure": "1"
+        },
+        "Audiences": {
+            "Young": "2",
+            "Everyone": "3"
+        }
+    },
+    "G64": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "2"
+        },
+        "Audiences": {
+            "Young": "1",
+            "Everyone": "0"
+        }
+    }
+}

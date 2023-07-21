@@ -23,7 +23,7 @@ def create_system_json():
       data[topics_name]['Audiences'][audience_name] = audience_value
 
   
-  filename = "values_data.json"
+  filename = "values_topics.json"
   with open(filename, "w") as json_file:
     json.dump(data, json_file, indent=4)
 

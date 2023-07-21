@@ -1,0 +1,767 @@
+{
+    "Airplane": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "-1",
+            "RPG": "1",
+            "Simulation": "3",
+            "Strategy": "3",
+            "Casual": "3"
+        },
+        "Audiences": {
+            "Young": "3",
+            "Everyone": "3",
+            "Mature": "2"
+        }
+    },
+    "Aliens": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "1",
+            "RPG": "3",
+            "Simulation": "-1",
+            "Strategy": "2",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "2",
+            "Everyone": "3",
+            "Mature": "3"
+        }
+    },
+    "Alternate History": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "1",
+            "RPG": "3",
+            "Simulation": "1",
+            "Strategy": "2",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "-1",
+            "Everyone": "3",
+            "Mature": "3"
+        }
+    },
+    "Business": {
+        "Genres": {
+            "Action": "-1",
+            "Adventure": "1",
+            "RPG": "1",
+            "Simulation": "3",
+            "Strategy": "3",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "2",
+            "Everyone": "3",
+            "Mature": "-1"
+        }
+    },
+    "City": {
+        "Genres": {
+            "Action": "-1",
+            "Adventure": "-1",
+            "RPG": "-1",
+            "Simulation": "3",
+            "Strategy": "3",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "2",
+            "Everyone": "3",
+            "Mature": "1"
+        }
+    },
+    "Comedy": {
+        "Genres": {
+            "Action": "-1",
+            "Adventure": "3",
+            "RPG": "1",
+            "Simulation": "-1",
+            "Strategy": "-1",
+            "Casual": "3"
+        },
+        "Audiences": {
+            "Young": "1",
+            "Everyone": "2",
+            "Mature": "3"
+        }
+    },
+    "Cyberpunk": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "1",
+            "RPG": "3",
+            "Simulation": "1",
+            "Strategy": "-1",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "-1",
+            "Everyone": "2",
+            "Mature": "3"
+        }
+    },
+    "Dance": {
+        "Genres": {
+            "Action": "-1",
+            "Adventure": "-1",
+            "RPG": "-1",
+            "Simulation": "3",
+            "Strategy": "-1",
+            "Casual": "3"
+        },
+        "Audiences": {
+            "Young": "3",
+            "Everyone": "2",
+            "Mature": "1"
+        }
+    },
+    "Detective": {
+        "Genres": {
+            "Action": "-1",
+            "Adventure": "3",
+            "RPG": "3",
+            "Simulation": "1",
+            "Strategy": "-1",
+            "Casual": "2"
+        },
+        "Audiences": {
+            "Young": "2",
+            "Everyone": "3",
+            "Mature": "1"
+        }
+    },
+    "Dungeon": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "1",
+            "RPG": "3",
+            "Simulation": "3",
+            "Strategy": "3",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "1",
+            "Everyone": "3",
+            "Mature": "3"
+        }
+    },
+    "Evolution": {
+        "Genres": {
+            "Action": "-1",
+            "Adventure": "-1",
+            "RPG": "-1",
+            "Simulation": "3",
+            "Strategy": "3",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "1",
+            "Everyone": "3",
+            "Mature": "-1"
+        }
+    },
+    "Fantasy": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "3",
+            "RPG": "3",
+            "Simulation": "1",
+            "Strategy": "3",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "3",
+            "Everyone": "3",
+            "Mature": "3"
+        }
+    },
+    "Fashion": {
+        "Genres": {
+            "Action": "-1",
+            "Adventure": "1",
+            "RPG": "3",
+            "Simulation": "3",
+            "Strategy": "-1",
+            "Casual": "3"
+        },
+        "Audiences": {
+            "Young": "3",
+            "Everyone": "1",
+            "Mature": "-1"
+        }
+    },
+    "Game Dev": {
+        "Genres": {
+            "Action": "-1",
+            "Adventure": "-1",
+            "RPG": "-1",
+            "Simulation": "-13",
+            "Strategy": "-1",
+            "Casual": "1"
+        },
+        "Audiences": {
+            "Young": "2",
+            "Everyone": "3",
+            "Mature": "-1"
+        }
+    },
+    "Government": {
+        "Genres": {
+            "Action": "-1",
+            "Adventure": "-1",
+            "RPG": "-1",
+            "Simulation": "3",
+            "Strategy": "3",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "-1",
+            "Everyone": "3",
+            "Mature": "1"
+        }
+    },
+    "Hacking": {
+        "Genres": {
+            "Action": "-1",
+            "Adventure": "1",
+            "RPG": "-1",
+            "Simulation": "3",
+            "Strategy": "3",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "-1",
+            "Everyone": "2",
+            "Mature": "3"
+        }
+    },
+    "History": {
+        "Genres": {
+            "Action": "1",
+            "Adventure": "1",
+            "RPG": "1",
+            "Simulation": "3",
+            "Strategy": "3",
+            "Casual": "2"
+        },
+        "Audiences": {
+            "Young": "1",
+            "Everyone": "3",
+            "Mature": "2"
+        }
+    },
+    "Horror": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "3",
+            "RPG": "1",
+            "Simulation": "-1",
+            "Strategy": "-1",
+            "Casual": "1"
+        },
+        "Audiences": {
+            "Young": "-1",
+            "Everyone": "2",
+            "Mature": "3"
+        }
+    },
+    "Hospital": {
+        "Genres": {
+            "Action": "-1",
+            "Adventure": "-1",
+            "RPG": "1",
+            "Simulation": "3",
+            "Strategy": "1",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "-1",
+            "Everyone": "3",
+            "Mature": "1"
+        }
+    },
+    "Hunting": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "2",
+            "RPG": "2",
+            "Simulation": "3",
+            "Strategy": "-1",
+            "Casual": "2"
+        },
+        "Audiences": {
+            "Young": "2",
+            "Everyone": "3",
+            "Mature": "2"
+        }
+    },
+    "Law": {
+        "Genres": {
+            "Action": "-1",
+            "Adventure": "3",
+            "RPG": "2",
+            "Simulation": "2",
+            "Strategy": "2",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "1",
+            "Everyone": "3",
+            "Mature": "-1"
+        }
+    },
+    "Life": {
+        "Genres": {
+            "Action": "-1",
+            "Adventure": "3",
+            "RPG": "2",
+            "Simulation": "3",
+            "Strategy": "-1",
+            "Casual": "1"
+        },
+        "Audiences": {
+            "Young": "3",
+            "Everyone": "3",
+            "Mature": "1"
+        }
+    },
+    "Martial Arts": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "1",
+            "RPG": "3",
+            "Simulation": "3",
+            "Strategy": "-1",
+            "Casual": "3"
+        },
+        "Audiences": {
+            "Young": "-1",
+            "Everyone": "2",
+            "Mature": "3"
+        }
+    },
+    "Medieval": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "3",
+            "RPG": "3",
+            "Simulation": "1",
+            "Strategy": "3",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "3",
+            "Everyone": "3",
+            "Mature": "2"
+        }
+    },
+    "Military": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "-1",
+            "RPG": "1",
+            "Simulation": "3",
+            "Strategy": "3",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "-1",
+            "Everyone": "2",
+            "Mature": "3"
+        }
+    },
+    "Movies": {
+        "Genres": {
+            "Action": "1",
+            "Adventure": "1",
+            "RPG": "-1",
+            "Simulation": "3",
+            "Strategy": "-1",
+            "Casual": "3"
+        },
+        "Audiences": {
+            "Young": "2",
+            "Everyone": "3",
+            "Mature": "2"
+        }
+    },
+    "Music": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "2",
+            "RPG": "-1",
+            "Simulation": "3",
+            "Strategy": "-1",
+            "Casual": "3"
+        },
+        "Audiences": {
+            "Young": "3",
+            "Everyone": "2",
+            "Mature": "1"
+        }
+    },
+    "Mystery": {
+        "Genres": {
+            "Action": "-1",
+            "Adventure": "3",
+            "RPG": "3",
+            "Simulation": "1",
+            "Strategy": "-1",
+            "Casual": "1"
+        },
+        "Audiences": {
+            "Young": "1",
+            "Everyone": "2",
+            "Mature": "3"
+        }
+    },
+    "Ninja": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "1",
+            "RPG": "1",
+            "Simulation": "-1",
+            "Strategy": "1",
+            "Casual": "2"
+        },
+        "Audiences": {
+            "Young": "3",
+            "Everyone": "2",
+            "Mature": "2"
+        }
+    },
+    "Pirate": {
+        "Genres": {
+            "Action": "1",
+            "Adventure": "3",
+            "RPG": "2",
+            "Simulation": "2",
+            "Strategy": "-1",
+            "Casual": "1"
+        },
+        "Audiences": {
+            "Young": "3",
+            "Everyone": "3",
+            "Mature": "1"
+        }
+    },
+    "Post Apocalyptic": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "1",
+            "RPG": "3",
+            "Simulation": "-1",
+            "Strategy": "2",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "-1",
+            "Everyone": "2",
+            "Mature": "3"
+        }
+    },
+    "Prison": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "3",
+            "RPG": "1",
+            "Simulation": "3",
+            "Strategy": "1",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "-1",
+            "Everyone": "2",
+            "Mature": "3"
+        }
+    },
+    "Racing": {
+        "Genres": {
+            "Action": "2",
+            "Adventure": "-1",
+            "RPG": "1",
+            "Simulation": "3",
+            "Strategy": "-1",
+            "Casual": "3"
+        },
+        "Audiences": {
+            "Young": "3",
+            "Everyone": "3",
+            "Mature": "2"
+        }
+    },
+    "Rhythm": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "-1",
+            "RPG": "-1",
+            "Simulation": "3",
+            "Strategy": "-1",
+            "Casual": "3"
+        },
+        "Audiences": {
+            "Young": "3",
+            "Everyone": "2",
+            "Mature": "1"
+        }
+    },
+    "Romance": {
+        "Genres": {
+            "Action": "-1",
+            "Adventure": "3",
+            "RPG": "1",
+            "Simulation": "2",
+            "Strategy": "-1",
+            "Casual": "2"
+        },
+        "Audiences": {
+            "Young": "1",
+            "Everyone": "3",
+            "Mature": "3"
+        }
+    },
+    "School": {
+        "Genres": {
+            "Action": "1",
+            "Adventure": "3",
+            "RPG": "3",
+            "Simulation": "3",
+            "Strategy": "3",
+            "Casual": "1"
+        },
+        "Audiences": {
+            "Young": "3",
+            "Everyone": "2",
+            "Mature": "-1"
+        }
+    },
+    "Sci-fi": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "3",
+            "RPG": "3",
+            "Simulation": "3",
+            "Strategy": "3",
+            "Casual": "1"
+        },
+        "Audiences": {
+            "Young": "1",
+            "Everyone": "3",
+            "Mature": "3"
+        }
+    },
+    "Space": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "1",
+            "RPG": "-1",
+            "Simulation": "3",
+            "Strategy": "3",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "1",
+            "Everyone": "3",
+            "Mature": "3"
+        }
+    },
+    "Sports": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "-1",
+            "RPG": "-1",
+            "Simulation": "3",
+            "Strategy": "-1",
+            "Casual": "3"
+        },
+        "Audiences": {
+            "Young": "3",
+            "Everyone": "3",
+            "Mature": "1"
+        }
+    },
+    "Spy": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "3",
+            "RPG": "3",
+            "Simulation": "1",
+            "Strategy": "-1",
+            "Casual": "1"
+        },
+        "Audiences": {
+            "Young": "1",
+            "Everyone": "2",
+            "Mature": "3"
+        }
+    },
+    "Superheroes": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "-1",
+            "RPG": "2",
+            "Simulation": "-1",
+            "Strategy": "-1",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "3",
+            "Everyone": "3",
+            "Mature": "3"
+        }
+    },
+    "Surgery": {
+        "Genres": {
+            "Action": "1",
+            "Adventure": "-1",
+            "RPG": "-1",
+            "Simulation": "3",
+            "Strategy": "-1",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "1",
+            "Everyone": "3",
+            "Mature": "2"
+        }
+    },
+    "Time Travel": {
+        "Genres": {
+            "Action": "2",
+            "Adventure": "3",
+            "RPG": "3",
+            "Simulation": "-1",
+            "Strategy": "-1",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "2",
+            "Everyone": "3",
+            "Mature": "1"
+        }
+    },
+    "Transport": {
+        "Genres": {
+            "Action": "-1",
+            "Adventure": "-1",
+            "RPG": "-1",
+            "Simulation": "3",
+            "Strategy": "3",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "2",
+            "Everyone": "3",
+            "Mature": "-1"
+        }
+    },
+    "Ufo": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "1",
+            "RPG": "-1",
+            "Simulation": "1",
+            "Strategy": "3",
+            "Casual": "1"
+        },
+        "Audiences": {
+            "Young": "1",
+            "Everyone": "3",
+            "Mature": "2"
+        }
+    },
+    "Vampire": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "1",
+            "RPG": "3",
+            "Simulation": "-1",
+            "Strategy": "-1",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "-1",
+            "Everyone": "3",
+            "Mature": "3"
+        }
+    },
+    "Virtual Pet": {
+        "Genres": {
+            "Action": "-1",
+            "Adventure": "1",
+            "RPG": "2",
+            "Simulation": "3",
+            "Strategy": "2",
+            "Casual": "3"
+        },
+        "Audiences": {
+            "Young": "3",
+            "Everyone": "1",
+            "Mature": "-1"
+        }
+    },
+    "Vocabulary": {
+        "Genres": {
+            "Action": "-1",
+            "Adventure": "-1",
+            "RPG": "-1",
+            "Simulation": "3",
+            "Strategy": "3",
+            "Casual": "3"
+        },
+        "Audiences": {
+            "Young": "2",
+            "Everyone": "3",
+            "Mature": "-1"
+        }
+    },
+    "Werewolf": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "1",
+            "RPG": "3",
+            "Simulation": "-1",
+            "Strategy": "-1",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "-1",
+            "Everyone": "2",
+            "Mature": "3"
+        }
+    },
+    "Wild West": {
+        "Genres": {
+            "Action": "2",
+            "Adventure": "-1",
+            "RPG": "3",
+            "Simulation": "-1",
+            "Strategy": "-1",
+            "Casual": "-1"
+        },
+        "Audiences": {
+            "Young": "3",
+            "Everyone": "2",
+            "Mature": "3"
+        }
+    },
+    "Zombies": {
+        "Genres": {
+            "Action": "3",
+            "Adventure": "2",
+            "RPG": "-1",
+            "Simulation": "-1",
+            "Strategy": "2",
+            "Casual": "3"
+        },
+        "Audiences": {
+            "Young": "2",
+            "Everyone": "1",
+            "Mature": "3"
+        }
+    }
+}

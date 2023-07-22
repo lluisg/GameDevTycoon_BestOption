@@ -8,32 +8,57 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container-title">
-    <h1>Which Game to Build?</h1>
-    <h2>Game Dev Tycoon</h2>
+  <h1>Which Game to Build?<a class="mini-title">Game Dev Tycoon</a></h1>
+
+  <div class="container-select">
+    <div class="container-subtitle">
+      <a class="subtitle">Systems</h3>
+      <a class="expand" id="btne-sys" onclick="expandButtons('cbtns-sys', 'btne-sys')">hide</a>  
+    </div>
+    <div class="container-btns" id="cbtns-sys">
+    </div>
   </div>
 
-  <ul id="system-list"></ul>
-  <!-- <div class="container mt-4">
-    <h1>Options Toggler</h1>
-    <ul class="list-group mt-4" id="optionsList">
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        Option 1
-        <label class="switch">
-          <input type="checkbox">
-          <span class="slider"></span>
-        </label>
-      </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        Option 2
-        <label class="switch">
-          <input type="checkbox">
-          <span class="slider"></span>
-        </label>
-      </li>
-    </ul>
-    <button class="btn btn-primary mt-3" id="showOptionsBtn">Show Options</button>
-  </div> -->
+  <div class="container-select">
+    <div class="container-subtitle">
+      <a class="subtitle">Topics</h3>
+      <a class="expand" id="btne-tpc" onclick="expandButtons('cbtns-tpc', 'btne-tpc')">hide</a>  
+    </div>
+    <div class="container-btns" id="cbtns-tpc">
+    </div>
+  </div>
+
+  <div class="container-search">
+    <button class="search-btn" onclick="searchGames()">Find</button>
+  </div>
+
+  <div class="separator"></div>
+
+  <div class="container-results">
+    <div class="result" id="names-results">
+      <div class="result-info">
+        <a class="result-punctuation rslt-names">Punct.</a>
+        <a class="result-console rslt-names">System</a>
+        <a class="result-topic rslt-names">Topic</a>
+        <a class="result-genre1 rslt-names">Genre</a>
+        <a class="result-genre2 rslt-names">2nd Genre</a>
+      </div>
+      <a class="expand"></a>  
+    </div>
+    <div class="result">
+      <div class="result-info">
+        <a class="result-punctuation">23</a>
+        <a class="result-console">PC</a>
+        <a class="result-topic">Comedy</a>
+        <a class="result-genre1">Action</a>
+        <a class="result-genre2">RPG</a>
+      </div>
+      <a class="expand" id="btne-res" onclick="expandButtons('dev-phases', 'btne-res')">expand</a>  
+    </div>
+    <div class="hide" id="dev-phases">
+
+    </div>
+  </div>
 
   <!-- Link to the external JavaScript file -->
   <script src="script.js"></script>

@@ -6,7 +6,7 @@
             "RPG": "2",
             "Simulation": "3",
             "Strategy": "3",
-            "Casual": "-1"
+            "Casual": "-3"
         },
         "Audiences": {
             "Young": "1",
@@ -21,7 +21,7 @@
             "RPG": "2",
             "Simulation": "2",
             "Strategy": "3",
-            "Casual": "-1"
+            "Casual": "-2"
         },
         "Audiences": {
             "Young": "1",
@@ -32,46 +32,46 @@
     "TES": {
         "Genres": {
             "Action": "1",
-            "Adventure": "-1",
+            "Adventure": "-2",
             "RPG": "1",
             "Simulation": "1",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "3"
         },
         "Audiences": {
             "Young": "3",
             "Everyone": "2",
-            "Mature": "-1"
+            "Mature": "-3"
         }
     },
     "Master V": {
         "Genres": {
             "Action": "2",
-            "Adventure": "-1",
+            "Adventure": "-2",
             "RPG": "1",
             "Simulation": "1",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "3"
         },
         "Audiences": {
             "Young": "2",
             "Everyone": "3",
-            "Mature": "-1"
+            "Mature": "-2"
         }
     },
     "Gameling": {
         "Genres": {
             "Action": "1",
-            "Adventure": "-1",
+            "Adventure": "-2",
             "RPG": "2",
             "Simulation": "2",
-            "Strategy": "-1",
+            "Strategy": "-3",
             "Casual": "3"
         },
         "Audiences": {
             "Young": "3",
             "Everyone": "2",
-            "Mature": "-1"
+            "Mature": "-3"
         }
     },
     "Vena Gear": {
@@ -80,7 +80,7 @@
             "Adventure": "1",
             "RPG": "1",
             "Simulation": "2",
-            "Strategy": "-1",
+            "Strategy": "-3",
             "Casual": "3"
         },
         "Audiences": {
@@ -95,8 +95,8 @@
             "Adventure": "1",
             "RPG": "1",
             "Simulation": "2",
-            "Strategy": "-1",
-            "Casual": "-1"
+            "Strategy": "-3",
+            "Casual": "-2"
         },
         "Audiences": {
             "Young": "1",
@@ -110,13 +110,13 @@
             "Adventure": "2",
             "RPG": "2",
             "Simulation": "3",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "2"
         },
         "Audiences": {
             "Young": "3",
             "Everyone": "2",
-            "Mature": "-1"
+            "Mature": "-2"
         }
     },
     "Playsistem": {
@@ -125,8 +125,8 @@
             "Adventure": "1",
             "RPG": "3",
             "Simulation": "2",
-            "Strategy": "-1",
-            "Casual": "-1"
+            "Strategy": "-2",
+            "Casual": "-3"
         },
         "Audiences": {
             "Young": "1",
@@ -138,9 +138,9 @@
         "Genres": {
             "Action": "2",
             "Adventure": "1",
-            "RPG": "-1",
+            "RPG": "-2",
             "Simulation": "1",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "2"
         },
         "Audiences": {
@@ -152,14 +152,14 @@
     "DreamVast": {
         "Genres": {
             "Action": "3",
-            "Adventure": "-1",
+            "Adventure": "-2",
             "RPG": "1",
             "Simulation": "3",
-            "Strategy": "-1",
-            "Casual": "-1"
+            "Strategy": "-2",
+            "Casual": "-2"
         },
         "Audiences": {
-            "Young": "-1",
+            "Young": "-2",
             "Everyone": "3",
             "Mature": "3"
         }
@@ -170,7 +170,7 @@
             "Adventure": "1",
             "RPG": "3",
             "Simulation": "2",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "2"
         },
         "Audiences": {
@@ -185,8 +185,8 @@
             "Adventure": "1",
             "RPG": "2",
             "Simulation": "2",
-            "Strategy": "-1",
-            "Casual": "-1"
+            "Strategy": "-2",
+            "Casual": "-2"
         },
         "Audiences": {
             "Young": "1",
@@ -198,9 +198,9 @@
         "Genres": {
             "Action": "1",
             "Adventure": "1",
-            "RPG": "-1",
+            "RPG": "-2",
             "Simulation": "1",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "3"
         },
         "Audiences": {
@@ -227,7 +227,7 @@
     "PPS": {
         "Genres": {
             "Action": "3",
-            "Adventure": "-1",
+            "Adventure": "-2",
             "RPG": "3",
             "Simulation": "1",
             "Strategy": "1",
@@ -239,13 +239,13 @@
             "Mature": "3"
         }
     },
-    "mBox 36-1": {
+    "mBox 36-2": {
         "Genres": {
             "Action": "3",
             "Adventure": "2",
             "RPG": "3",
             "Simulation": "2",
-            "Strategy": "-1",
+            "Strategy": "-3",
             "Casual": "2"
         },
         "Audiences": {
@@ -257,16 +257,16 @@
     "Nuu": {
         "Genres": {
             "Action": "1",
-            "Adventure": "-1",
-            "RPG": "-1",
+            "Adventure": "-2",
+            "RPG": "-2",
             "Simulation": "3",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "3"
         },
         "Audiences": {
             "Young": "3",
             "Everyone": "3",
-            "Mature": "-1"
+            "Mature": "-2"
         }
     },
     "Playsystem 3": {
@@ -275,7 +275,7 @@
             "Adventure": "2",
             "RPG": "2",
             "Simulation": "3",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "1"
         },
         "Audiences": {
@@ -288,22 +288,22 @@
         "Genres": {
             "Action": "1",
             "Adventure": "1",
-            "RPG": "-1",
+            "RPG": "-2",
             "Simulation": "2",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "3"
         },
         "Audiences": {
             "Young": "2",
             "Everyone": "3",
-            "Mature": "-1"
+            "Mature": "-3"
         }
     },
     "grPad": {
         "Genres": {
             "Action": "1",
             "Adventure": "2",
-            "RPG": "-1",
+            "RPG": "-2",
             "Simulation": "2",
             "Strategy": "2",
             "Casual": "3"
@@ -311,20 +311,20 @@
         "Audiences": {
             "Young": "2",
             "Everyone": "3",
-            "Mature": "-1"
+            "Mature": "-3"
         }
     },
     "mPad": {
         "Genres": {
-            "Action": "-1",
+            "Action": "-2",
             "Adventure": "2",
             "RPG": "1",
             "Simulation": "2",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "2"
         },
         "Audiences": {
-            "Young": "-1",
+            "Young": "-2",
             "Everyone": "2",
             "Mature": "1"
         }
@@ -332,22 +332,22 @@
     "Wuu": {
         "Genres": {
             "Action": "2",
-            "Adventure": "-1",
+            "Adventure": "-2",
             "RPG": "1",
             "Simulation": "3",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "3"
         },
         "Audiences": {
             "Young": "2",
             "Everyone": "3",
-            "Mature": "-1"
+            "Mature": "-2"
         }
     },
     "OYA": {
         "Genres": {
             "Action": "2",
-            "Adventure": "-1",
+            "Adventure": "-2",
             "RPG": "1",
             "Simulation": "2",
             "Strategy": "1",
@@ -365,11 +365,11 @@
             "Adventure": "1",
             "RPG": "2",
             "Simulation": "2",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "2"
         },
         "Audiences": {
-            "Young": "-1",
+            "Young": "-2",
             "Everyone": "3",
             "Mature": "1"
         }
@@ -380,7 +380,7 @@
             "Adventure": "1",
             "RPG": "3",
             "Simulation": "2",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "2"
         },
         "Audiences": {
@@ -395,7 +395,7 @@
             "Adventure": "2",
             "RPG": "2",
             "Simulation": "1",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "3"
         },
         "Audiences": {
@@ -407,10 +407,10 @@
     "Playsystem 5": {
         "Genres": {
             "Action": "3",
-            "Adventure": "-1",
+            "Adventure": "-2",
             "RPG": "2",
             "Simulation": "3",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "2"
         },
         "Audiences": {

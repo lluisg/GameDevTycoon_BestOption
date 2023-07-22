@@ -2,7 +2,7 @@
     "Airplane": {
         "Genres": {
             "Action": "3",
-            "Adventure": "-1",
+            "Adventure": "-3",
             "RPG": "1",
             "Simulation": "3",
             "Strategy": "3",
@@ -19,9 +19,9 @@
             "Action": "3",
             "Adventure": "1",
             "RPG": "3",
-            "Simulation": "-1",
+            "Simulation": "-3",
             "Strategy": "2",
-            "Casual": "-1"
+            "Casual": "-2"
         },
         "Audiences": {
             "Young": "2",
@@ -36,37 +36,37 @@
             "RPG": "3",
             "Simulation": "1",
             "Strategy": "2",
-            "Casual": "-1"
+            "Casual": "-3"
         },
         "Audiences": {
-            "Young": "-1",
+            "Young": "-3",
             "Everyone": "3",
             "Mature": "3"
         }
     },
     "Business": {
         "Genres": {
-            "Action": "-1",
+            "Action": "-3",
             "Adventure": "1",
             "RPG": "1",
             "Simulation": "3",
             "Strategy": "3",
-            "Casual": "-1"
+            "Casual": "-3"
         },
         "Audiences": {
             "Young": "2",
             "Everyone": "3",
-            "Mature": "-1"
+            "Mature": "-2"
         }
     },
     "City": {
         "Genres": {
-            "Action": "-1",
-            "Adventure": "-1",
-            "RPG": "-1",
+            "Action": "-2",
+            "Adventure": "-3",
+            "RPG": "-2",
             "Simulation": "3",
             "Strategy": "3",
-            "Casual": "-1"
+            "Casual": "-2"
         },
         "Audiences": {
             "Young": "2",
@@ -76,11 +76,11 @@
     },
     "Comedy": {
         "Genres": {
-            "Action": "-1",
+            "Action": "-3",
             "Adventure": "3",
             "RPG": "1",
-            "Simulation": "-1",
-            "Strategy": "-1",
+            "Simulation": "-3",
+            "Strategy": "-3",
             "Casual": "3"
         },
         "Audiences": {
@@ -95,22 +95,22 @@
             "Adventure": "1",
             "RPG": "3",
             "Simulation": "1",
-            "Strategy": "-1",
-            "Casual": "-1"
+            "Strategy": "-2",
+            "Casual": "-3"
         },
         "Audiences": {
-            "Young": "-1",
+            "Young": "-2",
             "Everyone": "2",
             "Mature": "3"
         }
     },
     "Dance": {
         "Genres": {
-            "Action": "-1",
-            "Adventure": "-1",
-            "RPG": "-1",
+            "Action": "-2",
+            "Adventure": "-3",
+            "RPG": "-3",
             "Simulation": "3",
-            "Strategy": "-1",
+            "Strategy": "-3",
             "Casual": "3"
         },
         "Audiences": {
@@ -121,11 +121,11 @@
     },
     "Detective": {
         "Genres": {
-            "Action": "-1",
+            "Action": "-3",
             "Adventure": "3",
             "RPG": "3",
             "Simulation": "1",
-            "Strategy": "-1",
+            "Strategy": "-3",
             "Casual": "2"
         },
         "Audiences": {
@@ -141,7 +141,7 @@
             "RPG": "3",
             "Simulation": "3",
             "Strategy": "3",
-            "Casual": "-1"
+            "Casual": "-3"
         },
         "Audiences": {
             "Young": "1",
@@ -151,17 +151,17 @@
     },
     "Evolution": {
         "Genres": {
-            "Action": "-1",
-            "Adventure": "-1",
-            "RPG": "-1",
+            "Action": "-2",
+            "Adventure": "-3",
+            "RPG": "-3",
             "Simulation": "3",
             "Strategy": "3",
-            "Casual": "-1"
+            "Casual": "-3"
         },
         "Audiences": {
             "Young": "1",
             "Everyone": "3",
-            "Mature": "-1"
+            "Mature": "-2"
         }
     },
     "Fantasy": {
@@ -171,7 +171,7 @@
             "RPG": "3",
             "Simulation": "1",
             "Strategy": "3",
-            "Casual": "-1"
+            "Casual": "-3"
         },
         "Audiences": {
             "Young": "3",
@@ -181,60 +181,60 @@
     },
     "Fashion": {
         "Genres": {
-            "Action": "-1",
+            "Action": "-3",
             "Adventure": "1",
             "RPG": "3",
             "Simulation": "3",
-            "Strategy": "-1",
+            "Strategy": "-3",
             "Casual": "3"
         },
         "Audiences": {
             "Young": "3",
             "Everyone": "1",
-            "Mature": "-1"
+            "Mature": "-3"
         }
     },
     "Game Dev": {
         "Genres": {
-            "Action": "-1",
-            "Adventure": "-1",
-            "RPG": "-1",
-            "Simulation": "-13",
-            "Strategy": "-1",
+            "Action": "-3",
+            "Adventure": "-2",
+            "RPG": "-3",
+            "Simulation": "-33",
+            "Strategy": "-3",
             "Casual": "1"
         },
         "Audiences": {
             "Young": "2",
             "Everyone": "3",
-            "Mature": "-1"
+            "Mature": "-2"
         }
     },
     "Government": {
         "Genres": {
-            "Action": "-1",
-            "Adventure": "-1",
-            "RPG": "-1",
+            "Action": "-3",
+            "Adventure": "-3",
+            "RPG": "-3",
             "Simulation": "3",
             "Strategy": "3",
-            "Casual": "-1"
+            "Casual": "-2"
         },
         "Audiences": {
-            "Young": "-1",
+            "Young": "-3",
             "Everyone": "3",
             "Mature": "1"
         }
     },
     "Hacking": {
         "Genres": {
-            "Action": "-1",
+            "Action": "-2",
             "Adventure": "1",
-            "RPG": "-1",
+            "RPG": "-2",
             "Simulation": "3",
             "Strategy": "3",
-            "Casual": "-1"
+            "Casual": "-3"
         },
         "Audiences": {
-            "Young": "-1",
+            "Young": "-2",
             "Everyone": "2",
             "Mature": "3"
         }
@@ -259,27 +259,27 @@
             "Action": "3",
             "Adventure": "3",
             "RPG": "1",
-            "Simulation": "-1",
-            "Strategy": "-1",
+            "Simulation": "-3",
+            "Strategy": "-2",
             "Casual": "1"
         },
         "Audiences": {
-            "Young": "-1",
+            "Young": "-3",
             "Everyone": "2",
             "Mature": "3"
         }
     },
     "Hospital": {
         "Genres": {
-            "Action": "-1",
-            "Adventure": "-1",
+            "Action": "-3",
+            "Adventure": "-3",
             "RPG": "1",
             "Simulation": "3",
             "Strategy": "1",
-            "Casual": "-1"
+            "Casual": "-2"
         },
         "Audiences": {
-            "Young": "-1",
+            "Young": "-2",
             "Everyone": "3",
             "Mature": "1"
         }
@@ -290,7 +290,7 @@
             "Adventure": "2",
             "RPG": "2",
             "Simulation": "3",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "2"
         },
         "Audiences": {
@@ -301,26 +301,26 @@
     },
     "Law": {
         "Genres": {
-            "Action": "-1",
+            "Action": "-3",
             "Adventure": "3",
             "RPG": "2",
             "Simulation": "2",
             "Strategy": "2",
-            "Casual": "-1"
+            "Casual": "-3"
         },
         "Audiences": {
             "Young": "1",
             "Everyone": "3",
-            "Mature": "-1"
+            "Mature": "-2"
         }
     },
     "Life": {
         "Genres": {
-            "Action": "-1",
+            "Action": "-3",
             "Adventure": "3",
             "RPG": "2",
             "Simulation": "3",
-            "Strategy": "-1",
+            "Strategy": "-3",
             "Casual": "1"
         },
         "Audiences": {
@@ -335,11 +335,11 @@
             "Adventure": "1",
             "RPG": "3",
             "Simulation": "3",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "3"
         },
         "Audiences": {
-            "Young": "-1",
+            "Young": "-2",
             "Everyone": "2",
             "Mature": "3"
         }
@@ -351,7 +351,7 @@
             "RPG": "3",
             "Simulation": "1",
             "Strategy": "3",
-            "Casual": "-1"
+            "Casual": "-2"
         },
         "Audiences": {
             "Young": "3",
@@ -362,14 +362,14 @@
     "Military": {
         "Genres": {
             "Action": "3",
-            "Adventure": "-1",
+            "Adventure": "-3",
             "RPG": "1",
             "Simulation": "3",
             "Strategy": "3",
-            "Casual": "-1"
+            "Casual": "-3"
         },
         "Audiences": {
-            "Young": "-1",
+            "Young": "-2",
             "Everyone": "2",
             "Mature": "3"
         }
@@ -378,9 +378,9 @@
         "Genres": {
             "Action": "1",
             "Adventure": "1",
-            "RPG": "-1",
+            "RPG": "-3",
             "Simulation": "3",
-            "Strategy": "-1",
+            "Strategy": "-3",
             "Casual": "3"
         },
         "Audiences": {
@@ -393,9 +393,9 @@
         "Genres": {
             "Action": "3",
             "Adventure": "2",
-            "RPG": "-1",
+            "RPG": "-3",
             "Simulation": "3",
-            "Strategy": "-1",
+            "Strategy": "-3",
             "Casual": "3"
         },
         "Audiences": {
@@ -406,11 +406,11 @@
     },
     "Mystery": {
         "Genres": {
-            "Action": "-1",
+            "Action": "-3",
             "Adventure": "3",
             "RPG": "3",
             "Simulation": "1",
-            "Strategy": "-1",
+            "Strategy": "-3",
             "Casual": "1"
         },
         "Audiences": {
@@ -424,7 +424,7 @@
             "Action": "3",
             "Adventure": "1",
             "RPG": "1",
-            "Simulation": "-1",
+            "Simulation": "-3",
             "Strategy": "1",
             "Casual": "2"
         },
@@ -440,7 +440,7 @@
             "Adventure": "3",
             "RPG": "2",
             "Simulation": "2",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "1"
         },
         "Audiences": {
@@ -454,12 +454,12 @@
             "Action": "3",
             "Adventure": "1",
             "RPG": "3",
-            "Simulation": "-1",
+            "Simulation": "-3",
             "Strategy": "2",
-            "Casual": "-1"
+            "Casual": "-3"
         },
         "Audiences": {
-            "Young": "-1",
+            "Young": "-3",
             "Everyone": "2",
             "Mature": "3"
         }
@@ -471,10 +471,10 @@
             "RPG": "1",
             "Simulation": "3",
             "Strategy": "1",
-            "Casual": "-1"
+            "Casual": "-3"
         },
         "Audiences": {
-            "Young": "-1",
+            "Young": "-2",
             "Everyone": "2",
             "Mature": "3"
         }
@@ -482,10 +482,10 @@
     "Racing": {
         "Genres": {
             "Action": "2",
-            "Adventure": "-1",
+            "Adventure": "-3",
             "RPG": "1",
             "Simulation": "3",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "3"
         },
         "Audiences": {
@@ -497,10 +497,10 @@
     "Rhythm": {
         "Genres": {
             "Action": "3",
-            "Adventure": "-1",
-            "RPG": "-1",
+            "Adventure": "-2",
+            "RPG": "-2",
             "Simulation": "3",
-            "Strategy": "-1",
+            "Strategy": "-3",
             "Casual": "3"
         },
         "Audiences": {
@@ -511,11 +511,11 @@
     },
     "Romance": {
         "Genres": {
-            "Action": "-1",
+            "Action": "-3",
             "Adventure": "3",
             "RPG": "1",
             "Simulation": "2",
-            "Strategy": "-1",
+            "Strategy": "-3",
             "Casual": "2"
         },
         "Audiences": {
@@ -536,7 +536,7 @@
         "Audiences": {
             "Young": "3",
             "Everyone": "2",
-            "Mature": "-1"
+            "Mature": "-2"
         }
     },
     "Sci-fi": {
@@ -558,10 +558,10 @@
         "Genres": {
             "Action": "3",
             "Adventure": "1",
-            "RPG": "-1",
+            "RPG": "-3",
             "Simulation": "3",
             "Strategy": "3",
-            "Casual": "-1"
+            "Casual": "-2"
         },
         "Audiences": {
             "Young": "1",
@@ -572,10 +572,10 @@
     "Sports": {
         "Genres": {
             "Action": "3",
-            "Adventure": "-1",
-            "RPG": "-1",
+            "Adventure": "-3",
+            "RPG": "-3",
             "Simulation": "3",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "3"
         },
         "Audiences": {
@@ -590,7 +590,7 @@
             "Adventure": "3",
             "RPG": "3",
             "Simulation": "1",
-            "Strategy": "-1",
+            "Strategy": "-2",
             "Casual": "1"
         },
         "Audiences": {
@@ -602,11 +602,11 @@
     "Superheroes": {
         "Genres": {
             "Action": "3",
-            "Adventure": "-1",
+            "Adventure": "-3",
             "RPG": "2",
-            "Simulation": "-1",
-            "Strategy": "-1",
-            "Casual": "-1"
+            "Simulation": "-3",
+            "Strategy": "-3",
+            "Casual": "-2"
         },
         "Audiences": {
             "Young": "3",
@@ -617,11 +617,11 @@
     "Surgery": {
         "Genres": {
             "Action": "1",
-            "Adventure": "-1",
-            "RPG": "-1",
+            "Adventure": "-2",
+            "RPG": "-3",
             "Simulation": "3",
-            "Strategy": "-1",
-            "Casual": "-1"
+            "Strategy": "-2",
+            "Casual": "-3"
         },
         "Audiences": {
             "Young": "1",
@@ -634,9 +634,9 @@
             "Action": "2",
             "Adventure": "3",
             "RPG": "3",
-            "Simulation": "-1",
-            "Strategy": "-1",
-            "Casual": "-1"
+            "Simulation": "-2",
+            "Strategy": "-3",
+            "Casual": "-2"
         },
         "Audiences": {
             "Young": "2",
@@ -646,24 +646,24 @@
     },
     "Transport": {
         "Genres": {
-            "Action": "-1",
-            "Adventure": "-1",
-            "RPG": "-1",
+            "Action": "-3",
+            "Adventure": "-3",
+            "RPG": "-3",
             "Simulation": "3",
             "Strategy": "3",
-            "Casual": "-1"
+            "Casual": "-3"
         },
         "Audiences": {
             "Young": "2",
             "Everyone": "3",
-            "Mature": "-1"
+            "Mature": "-2"
         }
     },
     "Ufo": {
         "Genres": {
             "Action": "3",
             "Adventure": "1",
-            "RPG": "-1",
+            "RPG": "-3",
             "Simulation": "1",
             "Strategy": "3",
             "Casual": "1"
@@ -679,19 +679,19 @@
             "Action": "3",
             "Adventure": "1",
             "RPG": "3",
-            "Simulation": "-1",
-            "Strategy": "-1",
-            "Casual": "-1"
+            "Simulation": "-3",
+            "Strategy": "-3",
+            "Casual": "-2"
         },
         "Audiences": {
-            "Young": "-1",
+            "Young": "-2",
             "Everyone": "3",
             "Mature": "3"
         }
     },
     "Virtual Pet": {
         "Genres": {
-            "Action": "-1",
+            "Action": "-3",
             "Adventure": "1",
             "RPG": "2",
             "Simulation": "3",
@@ -701,14 +701,14 @@
         "Audiences": {
             "Young": "3",
             "Everyone": "1",
-            "Mature": "-1"
+            "Mature": "-2"
         }
     },
     "Vocabulary": {
         "Genres": {
-            "Action": "-1",
-            "Adventure": "-1",
-            "RPG": "-1",
+            "Action": "-3",
+            "Adventure": "-3",
+            "RPG": "-3",
             "Simulation": "3",
             "Strategy": "3",
             "Casual": "3"
@@ -716,7 +716,7 @@
         "Audiences": {
             "Young": "2",
             "Everyone": "3",
-            "Mature": "-1"
+            "Mature": "-3"
         }
     },
     "Werewolf": {
@@ -724,12 +724,12 @@
             "Action": "3",
             "Adventure": "1",
             "RPG": "3",
-            "Simulation": "-1",
-            "Strategy": "-1",
-            "Casual": "-1"
+            "Simulation": "-3",
+            "Strategy": "-3",
+            "Casual": "-2"
         },
         "Audiences": {
-            "Young": "-1",
+            "Young": "-2",
             "Everyone": "2",
             "Mature": "3"
         }
@@ -737,11 +737,11 @@
     "Wild West": {
         "Genres": {
             "Action": "2",
-            "Adventure": "-1",
+            "Adventure": "-2",
             "RPG": "3",
-            "Simulation": "-1",
-            "Strategy": "-1",
-            "Casual": "-1"
+            "Simulation": "-3",
+            "Strategy": "-3",
+            "Casual": "-2"
         },
         "Audiences": {
             "Young": "3",
@@ -753,8 +753,8 @@
         "Genres": {
             "Action": "3",
             "Adventure": "2",
-            "RPG": "-1",
-            "Simulation": "-1",
+            "RPG": "-3",
+            "Simulation": "-3",
             "Strategy": "2",
             "Casual": "3"
         },

@@ -1,6 +1,5 @@
 /* styles.css */
 html{
-  font-size: 16px;
 }
 
 body{
@@ -8,37 +7,160 @@ body{
   background-color: white;
   width: auto;
   font-size: 10px;
-}
-
-.container-title{
-  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-
-  border: 2px solid red;
 }
 
+/* ------------------ TITLE ------------------ */
 h1{
-  border: solid 2px orange
+  margin: 0.5rem 1rem;
 }
-h2{
-  border: solid 2px blue
+.mini-title{
+  font-size: 0.5rem;
 }
 
+/* ------------------ BUTTONS ------------------ */
+.container-select{
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid gray; */
+  border-radius: 10px;
+  margin: 0.1rem 0;
+}
 
+.container-subtitle{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.subtitle{
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.1rem 1rem;
+}
+.expand{
+  width: 35px;
+  margin-right: 1rem;
+}
 
-#system-list li {
+.container-btns{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.btn-select {
   background-color: #FF5733;
   color: white;
   cursor: pointer;
   padding: 5px;
   margin: 5px;
+  width: 90px;
+  height: 35px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.7rem;
 }
 
-/* Style for the "on" state */
-#system-list li.on {
+.btn-select.on {
   background-color: #4CAF50;
+}
+
+#btne-tpc:hover, #btne-sys:hover, #btne-res:hover{
+  cursor: pointer;
+}
+
+/* ------------------ SEARCH ------------------ */
+.container-search {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.search-btn {
+  width: 100px;
+  height: 40px;
+  margin: 0.8rem 0;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.search-btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* ------------------ SEPARATOR ------------------ */
+.separator{
+  width: 100%;
+  background-color: black;
+  height: 2px;
+  margin: 0.8rem 0;
+}
+
+/* ------------------ SEPARATOR ------------------ */
+.container-results{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  border: 2px solid red;
+}
+.result{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 2px solid blue;
+}
+.rslt-names{
+  font-weight: bold;
+
+}
+.result-info{
+  display: flex;
+  font-size: 1rem;
+  flex-direction: row;
+  border: 2px solid green;
+  flex-wrap: wrap;
+}
+.result-punctuation, .result-console, .result-topic, .result-genre1, .result-genre2{
+  margin: 0.5rem 1.2rem;
+  width: 120px;
+}
+
+.result-punctuation{
+  border: 2px solid gray;
+}
+.result-console{
+  border: 2px solid yellow;
+}
+.result-topic{
+  border: 2px solid orange;
+}
+.result-genre1{
+  border: 2px solid purple;
+}
+.result-genre2{
+  border: 2px solid pink;
+}
+
+
+
+
+
+
+.hidden{
+  display: none;
 }

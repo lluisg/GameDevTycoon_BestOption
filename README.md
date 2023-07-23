@@ -1,8 +1,11 @@
 # GameDevTycoon_BestOption
 
 
-values topic/genre + topic/audiences:
-https://gamedevtycoon.fandom.com/wiki/Raw_Data_for_Review_Algorithm/1.4.3#Development_Focus
+values topic/genre:
+https://gamedevtycoon.fandom.com/wiki/Raw_Data_for_Review_Algorithm/1.4.3#Topic_Genre_Combinations
+
+values topic/audiences:
+https://gamedevtycoon.fandom.com/wiki/Raw_Data_for_Review_Algorithm/1.4.3#Topic_Audience_Combinations
 
 values platform/audience + platform/genre: https://steamcommunity.com/sharedfiles/filedetails/?id=176835673
 

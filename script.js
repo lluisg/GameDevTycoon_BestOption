@@ -1,10 +1,13 @@
-url_system = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_BestOption/main/GetInfo/values_system.json"
-url_topic = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_BestOption/main/GetInfo/values_topics.json"
-url_genre = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_BestOption/main/GetInfo/values_genre.json"
-url_multigenre = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_BestOption/main/GetInfo/values_multigenre.json"
+url_platforms_genres = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_BestOption/main/PrepareData/values_platform_genres.json"
+url_platforms_audiences = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_BestOption/main/PrepareData/values_platform_audiences.json"
+url_topics_genres = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_BestOption/main/PrepareData/values_topics_genres.json"
+url_topics_audiences = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_BestOption/main/PrepareData/values_topics_audiences.json"
+
+// url_genre = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_BestOption/main/GetInfo/values_genre.json"
+// url_multigenre = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_BestOption/main/GetInfo/values_multigenre.json"
 
 // Fetch the JSON data using an HTTP request
-fetch(url_system)
+fetch(url_platforms_genres)
   .then(response => response.json())
   .then(data => {
     const el = document.getElementById("cbtns-sys");
@@ -14,7 +17,7 @@ fetch(url_system)
     console.error('Error fetching the first system:', error);
   });
 
-fetch(url_topic)
+fetch(url_topics_genres)
 .then(response => response.json())
 .then(data => {
   const el = document.getElementById("cbtns-tpc");
@@ -40,6 +43,7 @@ function createListButtons(parentElement, dataArray, nameClass) {
   });
 }
 
+
 function expandButtons(elementID, currentElementID){
   let el = document.getElementById(elementID)
   let btn = document.getElementById(currentElementID)
@@ -53,8 +57,8 @@ function expandButtons(elementID, currentElementID){
   }
 }
 
-// ----------------------------------- CALCULATE THE BEST GAMES TO DEVELOP -----------------------------------
 
+// ----------------------------------- CALCULATE THE BEST GAMES TO DEVELOP -----------------------------------
 function saveButtonStates(className) {
   // saves the state of the buttons
   const buttons = document.querySelectorAll('.'+className);
@@ -70,6 +74,7 @@ function saveButtonStates(className) {
   return buttonStates
 }
 
+
 function getValidValues(states, data){
   var valid = {};
   for (const [btnk, btnv] of Object.entries(states)) {
@@ -80,40 +85,54 @@ function getValidValues(states, data){
   return valid
 }
 
-function calculateScores(vsys, vtpc){
+
+function calculateScores(vsys_genre, vsys_aud, vtpc_genre, vtpc_aud){
   scores = []
 
-  for (const [sysk, sysv] of Object.entries(vsys)) {
-    for (const [tpck, tpcv] of Object.entries(vtpc)) {
-      // console.log('k:', sysk, ', v:', sysv)
-      // console.log('k:', tpck, ', v:', tpcv)
-      for (const [genrek, genresys] of Object.entries(sysv['Genres'])) {
-        for (const [audk, audsys] of Object.entries(sysv['Audiences'])) {
-          genretpc = tpcv['Genres'][genrek]
-          audtpc = tpcv['Audiences'][audk]
-          // console.log(genrek, genrev)
-          // console.log(audk, audv)
+  for (const [platform, platform_genre_values] of Object.entries(vsys_genre)) {
+    for (const [topic, topic_genre_values] of Object.entries(vtpc_genre)) {
+      platform_audience_values = vsys_aud[platform]
+      topic_audience_values = vtpc_aud[topic]
 
-          value_score = genresys * genretpc + audsys * audtpc
-          scores.push([value_score, sysk, tpck, genrek, audk])
+      for (const [genre, plat_genre_value] of Object.entries(platform_genre_values)) {
+        for (const [aud, plat_aud_value] of Object.entries(platform_audience_values)) {
+          topic_genre_value = topic_genre_values[genre]
+          topic_aud_value = topic_audience_values[aud]
+
+          // console.log('genres', genre, plat_genre_value, topic_genre_value)
+          // console.log('audiences', aud, plat_aud_value, topic_aud_value)
+
+          value_score = plat_genre_value * topic_genre_value * topic_aud_value
+          value_sell = value_score * plat_aud_value
+          scores.push([value_score, value_sell, platform, topic, genre, aud])
         }
       }
     }
   }
-
   return scores  
 }
 
-function compareFirstValue(a, b) {
+
+function orderScoresGames(a, b) {
   const firstValueA = a[0];
   const firstValueB = b[0];
+  
+  const secondValueA = a[1];
+  const secondValueB = b[1];
   
   if (firstValueA < firstValueB) {
     return 1;
   } else if (firstValueA > firstValueB) {
     return -1;
   } else {
-    return 0;
+    // If the first values are equal, compare the second values
+    if (secondValueA < secondValueB) {
+      return 1;
+    } else if (secondValueA > secondValueB) {
+      return -1;
+    } else {
+      return 0;
+    }
   }
 }
 
@@ -121,10 +140,9 @@ function compareFirstValue(a, b) {
 function removeSameTopicGenre(scores){
   topics_used = []
   unique_games = []
-
   scores.forEach(element => {
-    [scores, sysk, tpck, genrek, audk] = element
-    genretopic = genrek +'/'+ tpck
+    [score1, score2, platform, topic, genre, aud] = element
+    genretopic = genre +'/'+ topic
     if (!topics_used.includes(genretopic)){
       unique_games.push(element)
       topics_used.push(genretopic)
@@ -133,23 +151,64 @@ function removeSameTopicGenre(scores){
   return unique_games
 }
 
-function CalculateGames(sys_data, topic_data, genre_data, multigenre_data, statesBtnSys, statesBtnTpc){
-  valid_sys = getValidValues(statesBtnSys, sys_data)
-  valid_tpc = getValidValues(statesBtnTpc, topic_data)
 
-  scores_games = calculateScores(valid_sys, valid_tpc)
-  scores_ord = scores_games.sort(compareFirstValue);
-  console.log(scores_ord)
+function shuffleWithinGroups(arrayOfArrays) {
+  function shuffleArray(array) {
+    // Fisher-Yates (Knuth) Shuffle Algorithm
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
 
-  scores_unique = removeSameTopicGenre(scores_ord)
+  // Group elements based on their first and second values
+  const groupedElements = {};
+  arrayOfArrays.forEach(arr => {
+    const key = arr.slice(0, 2).toString();
+    if (!groupedElements[key]) {
+      groupedElements[key] = [];
+    }
+    groupedElements[key].push(arr);
+  });
+
+  // Shuffle the first array within each group
+  Object.values(groupedElements).forEach(group => {
+    shuffleArray(group);
+  });
+
+  // Combine the shuffled groups back together
+  const shuffledArray = [];
+  Object.values(groupedElements).forEach(group => {
+    shuffledArray.push(...group);
+  });
+
+  return shuffledArray;
+}
+
+
+function CalculateGames(plat_genre_data, plat_aud_data, topic_genre_data, topic_aud_data, statesBtnSys, statesBtnTpc){
+  valid_plat_genre = getValidValues(statesBtnSys, plat_genre_data)
+  valid_plat_aud = getValidValues(statesBtnSys, plat_aud_data)
+  valid_tpc_genre = getValidValues(statesBtnTpc, topic_genre_data)
+  valid_tpc_aud = getValidValues(statesBtnTpc, topic_aud_data)
+
+  let scores_games = calculateScores(valid_plat_genre, valid_plat_aud, valid_tpc_genre, valid_tpc_aud)
+  console.log('scores', scores_games)
+  let scores_ord = scores_games.sort(orderScoresGames);
+  console.log('ordered', scores_ord)
+  let scores_unique = removeSameTopicGenre(scores_ord) // only keep the first with the same topic/genre
+  console.log('unique', scores_unique)
+
+  let scores_shuffled = shuffleWithinGroups(scores_unique); // shuffle the elements with the same score
+  console.log(scores_shuffled);
+
   // ADD MULTIGENRE
-  // ADD SOME RANDOMNESS
   // ADD THE INFO ON THE DEVELOPMENT BELOW
   // CHECK THAT THE EXPAND WORKS
 
-  putScoresWebpage(scores_unique)
-
+  putScoresWebpage(scores_shuffled)
 }
+
 
 var maxRecommended;
 function searchGames(){
@@ -158,41 +217,46 @@ function searchGames(){
   statesBtnSys = saveButtonStates('sys-btn')
   statesBtnTpc = saveButtonStates('tpc-btn')
 
-  fetch(url_system)
+  fetch(url_platforms_genres)
     .then(response => response.json())
-    .then(sys_data => {
-      fetch(url_topic)
+    .then(platform_genre_data => {
+      fetch(url_platforms_audiences)
         .then(response => response.json())
-        .then(topic_data => {
-          fetch(url_genre)
+        .then(platform_audience_data => {
+          fetch(url_topics_genres)
             .then(response => response.json())
-            .then(genre_data => {
-              fetch(url_multigenre)
+            .then(topic_genre_data => {
+              fetch(url_topics_audiences)
                 .then(response => response.json())
-                .then(multigenre_data => {
+                .then(topic_audience_data => {
 
-                  CalculateGames(sys_data, topic_data, genre_data, multigenre_data, statesBtnSys, statesBtnTpc)
+                  CalculateGames( platform_genre_data, 
+                                  platform_audience_data, 
+                                  topic_genre_data, 
+                                  topic_audience_data, 
+                                  statesBtnSys, 
+                                  statesBtnTpc)
 
                 })
                 // .catch(error => {
-                //   console.error('Error fetching multigenres:', error);
+                //   console.error('Error fetching topics & audiences:', error);
                 // });
             })
             // .catch(error => {
-            //   console.error('Error fetching the genres:', error);
+            //   console.error('Error fetching the topics & genres:', error);
             // });
         })
         // .catch(error => {
-        //   console.error('Error fetching the topics:', error);
+        //   console.error('Error fetching the platforms & audiences:', error);
         // });
     })
     // .catch(error => {
-    //   console.error('Error fetching the systems:', error);
+    //   console.error('Error fetching the platforms & genres:', error);
     // });
 }
 
-// ----------------------------------- PUT THE GAMES ON THE WEBSITE -----------------------------------
 
+// ----------------------------------- PUT THE GAMES ON THE WEBSITE -----------------------------------
 function putScoresWebpage(scores){
   const parentElement = document.getElementById("container-results");
 
@@ -227,39 +291,40 @@ function putScoresWebpage(scores){
   });
 }
 
+
 function addInfo2Table(info, table){
-  [scores, sysk, tpck, genrek, audk] = info
+  [score1, score2, platform, topic, genre, audience] = info
 
-  var score_a = document.createElement('a');
-  score_a.className = 'result-punctuation';
-  score_a.textContent = scores
+  var score1_a = document.createElement('a');
+  score1_a.className = 'result-score1';
+  score1_a.textContent = score1
 
-  var sys_a = document.createElement('a');
-  sys_a.className = 'result-console';
-  sys_a.textContent = sysk
+  var score2_a = document.createElement('a');
+  score2_a.className = 'result-score2';
+  score2_a.textContent = score2
+
+  var platform_a = document.createElement('a');
+  platform_a.className = 'result-platform';
+  platform_a.textContent = platform
 
   var topic_a = document.createElement('a');
   topic_a.className = 'result-topic';
-  topic_a.textContent = tpck
+  topic_a.textContent = topic
 
-  var genre1_a = document.createElement('a');
-  genre1_a.className = 'result-genre1';
-  genre1_a.textContent = genrek
-
-  var genre2_a = document.createElement('a');
-  genre2_a.className = 'result-genre2';
-  genre2_a.textContent = 'Other'
+  var genre_a = document.createElement('a');
+  genre_a.className = 'result-genre';
+  genre_a.textContent = genre
 
   var aud_a = document.createElement('a');
   aud_a.className = 'result-audience';
-  aud_a.textContent = audk
+  aud_a.textContent = audience
 
 
-  table.appendChild(score_a)
-  table.appendChild(sys_a)
+  table.appendChild(score1_a)
+  table.appendChild(score2_a)
+  table.appendChild(platform_a)
   table.appendChild(topic_a)
-  table.appendChild(genre1_a)
-  table.appendChild(genre2_a)
+  table.appendChild(genre_a)
   table.appendChild(aud_a)
 
   return table

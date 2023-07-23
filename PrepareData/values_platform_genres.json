@@ -1,8 +1,8 @@
 {
-    "Pc": {
+    "PC": {
         "Action": "0.9",
         "Adventure": "1",
-        "Rpg": "0.9",
+        "RPG": "0.9",
         "Simulation": "1",
         "Strategy": "1",
         "Casual": "0.6"
@@ -10,7 +10,7 @@
     "G64": {
         "Action": "0.9",
         "Adventure": "1",
-        "Rpg": "0.9",
+        "RPG": "0.9",
         "Simulation": "0.9",
         "Strategy": "1",
         "Casual": "0.7"
@@ -18,7 +18,7 @@
     "TES": {
         "Action": "0.8",
         "Adventure": "0.7",
-        "Rpg": "0.8",
+        "RPG": "0.8",
         "Simulation": "0.8",
         "Strategy": "0.7",
         "Casual": "1"
@@ -26,7 +26,7 @@
     "Master V": {
         "Action": "0.9",
         "Adventure": "0.7",
-        "Rpg": "0.8",
+        "RPG": "0.8",
         "Simulation": "0.8",
         "Strategy": "0.7",
         "Casual": "1"
@@ -34,7 +34,7 @@
     "Gameling": {
         "Action": "0.8",
         "Adventure": "0.7",
-        "Rpg": "0.9",
+        "RPG": "0.9",
         "Simulation": "0.9",
         "Strategy": "0.6",
         "Casual": "1"
@@ -42,7 +42,7 @@
     "Vena Gear": {
         "Action": "0.9",
         "Adventure": "0.8",
-        "Rpg": "0.8",
+        "RPG": "0.8",
         "Simulation": "0.9",
         "Strategy": "0.6",
         "Casual": "1"
@@ -50,7 +50,7 @@
     "Vena Oasis": {
         "Action": "1",
         "Adventure": "0.8",
-        "Rpg": "0.8",
+        "RPG": "0.8",
         "Simulation": "0.9",
         "Strategy": "0.6",
         "Casual": "0.7"
@@ -58,7 +58,7 @@
     "Super TES": {
         "Action": "0.9",
         "Adventure": "0.9",
-        "Rpg": "0.9",
+        "RPG": "0.9",
         "Simulation": "1",
         "Strategy": "0.7",
         "Casual": "0.9"
@@ -66,7 +66,7 @@
     "Playsystem": {
         "Action": "1",
         "Adventure": "0.8",
-        "Rpg": "1",
+        "RPG": "1",
         "Simulation": "0.9",
         "Strategy": "0.7",
         "Casual": "0.6"
@@ -74,7 +74,7 @@
     "TES 64": {
         "Action": "0.9",
         "Adventure": "0.8",
-        "Rpg": "0.7",
+        "RPG": "0.7",
         "Simulation": "0.8",
         "Strategy": "0.7",
         "Casual": "0.9"
@@ -82,7 +82,7 @@
     "Dreamvast": {
         "Action": "1",
         "Adventure": "0.7",
-        "Rpg": "0.8",
+        "RPG": "0.8",
         "Simulation": "1",
         "Strategy": "0.7",
         "Casual": "0.7"
@@ -90,7 +90,7 @@
     "Playsystem 0.9": {
         "Action": "1",
         "Adventure": "0.8",
-        "Rpg": "1",
+        "RPG": "1",
         "Simulation": "0.9",
         "Strategy": "0.7",
         "Casual": "0.9"
@@ -98,7 +98,7 @@
     "mBox": {
         "Action": "1",
         "Adventure": "0.8",
-        "Rpg": "0.9",
+        "RPG": "0.9",
         "Simulation": "0.9",
         "Strategy": "0.7",
         "Casual": "0.7"
@@ -106,7 +106,7 @@
     "Game Sphere": {
         "Action": "0.8",
         "Adventure": "0.8",
-        "Rpg": "0.7",
+        "RPG": "0.7",
         "Simulation": "0.8",
         "Strategy": "0.7",
         "Casual": "1"
@@ -114,7 +114,7 @@
     "GS": {
         "Action": "0.9",
         "Adventure": "0.9",
-        "Rpg": "1",
+        "RPG": "1",
         "Simulation": "0.9",
         "Strategy": "0.9",
         "Casual": "1"
@@ -122,7 +122,7 @@
     "PPS": {
         "Action": "1",
         "Adventure": "0.7",
-        "Rpg": "1",
+        "RPG": "1",
         "Simulation": "0.8",
         "Strategy": "0.8",
         "Casual": "0.8"
@@ -130,7 +130,7 @@
     "mBox 160": {
         "Action": "1",
         "Adventure": "0.9",
-        "Rpg": "1",
+        "RPG": "1",
         "Simulation": "0.9",
         "Strategy": "0.7",
         "Casual": "0.7"
@@ -138,7 +138,7 @@
     "Nuu": {
         "Action": "0.8",
         "Adventure": "0.6",
-        "Rpg": "0.7",
+        "RPG": "0.7",
         "Simulation": "1",
         "Strategy": "0.7",
         "Casual": "1"
@@ -146,7 +146,7 @@
     "Playsystem 1": {
         "Action": "1",
         "Adventure": "0.9",
-        "Rpg": "0.9",
+        "RPG": "0.9",
         "Simulation": "1",
         "Strategy": "0.7",
         "Casual": "0.8"
@@ -154,7 +154,7 @@
     "grPhone": {
         "Action": "0.8",
         "Adventure": "0.8",
-        "Rpg": "0.7",
+        "RPG": "0.7",
         "Simulation": "0.9",
         "Strategy": "0.7",
         "Casual": "1"
@@ -162,7 +162,7 @@
     "grPad": {
         "Action": "0.8",
         "Adventure": "0.9",
-        "Rpg": "0.7",
+        "RPG": "0.7",
         "Simulation": "0.9",
         "Strategy": "0.9",
         "Casual": "1"
@@ -170,7 +170,7 @@
     "mPad": {
         "Action": "0.7",
         "Adventure": "0.9",
-        "Rpg": "0.8",
+        "RPG": "0.8",
         "Simulation": "0.9",
         "Strategy": "0.7",
         "Casual": "0.9"
@@ -178,7 +178,7 @@
     "Wuu": {
         "Action": "0.9",
         "Adventure": "0.7",
-        "Rpg": "0.8",
+        "RPG": "0.8",
         "Simulation": "1",
         "Strategy": "0.7",
         "Casual": "1"
@@ -186,7 +186,7 @@
     "OYA": {
         "Action": "0.9",
         "Adventure": "0.7",
-        "Rpg": "0.8",
+        "RPG": "0.8",
         "Simulation": "0.9",
         "Strategy": "0.8",
         "Casual": "1"
@@ -194,7 +194,7 @@
     "mBox One": {
         "Action": "1",
         "Adventure": "0.8",
-        "Rpg": "0.9",
+        "RPG": "0.9",
         "Simulation": "0.9",
         "Strategy": "0.7",
         "Casual": "0.9"
@@ -202,7 +202,7 @@
     "Playsystem 4": {
         "Action": "1",
         "Adventure": "0.8",
-        "Rpg": "1",
+        "RPG": "1",
         "Simulation": "0.9",
         "Strategy": "0.7",
         "Casual": "0.9"
@@ -210,7 +210,7 @@
     "mBox Next": {
         "Action": "0.9",
         "Adventure": "0.9",
-        "Rpg": "0.9",
+        "RPG": "0.9",
         "Simulation": "0.8",
         "Strategy": "0.7",
         "Casual": "1"
@@ -218,7 +218,7 @@
     "Playsystem 5": {
         "Action": "1",
         "Adventure": "0.7",
-        "Rpg": "0.9",
+        "RPG": "0.9",
         "Simulation": "1",
         "Strategy": "0.7",
         "Casual": "0.9"
@@ -226,7 +226,7 @@
     "Swap": {
         "Action": "0.9",
         "Adventure": "0.8",
-        "Rpg": "1",
+        "RPG": "1",
         "Simulation": "0.8",
         "Strategy": "0.7",
         "Casual": "1"

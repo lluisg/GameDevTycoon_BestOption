@@ -145,24 +145,24 @@ h1{
   flex-direction: row;
   flex-wrap: wrap;
 }
-.result-punctuation, .result-console, .result-topic, .result-genre1, .result-genre2, .result-audience{
+.result-score1, .result-score2, .result-platform, .result-topic, .result-genre, .result-audience{
   margin: 0.5rem 1.2rem;
   width: 120px;
 }
 
-.result-punctuation{
+.result-score1{
   /* border: 2px solid gray; */
 }
-.result-console{
+.result-score2{
   /* border: 2px solid yellow; */
 }
-.result-topic{
+.result-platform{
   /* border: 2px solid orange; */
 }
-.result-genre1{
+.result-topic{
   /* border: 2px solid purple; */
 }
-.result-genre2{
+.result-genre{
   /* border: 2px solid pink; */
 }
 .result-audience{

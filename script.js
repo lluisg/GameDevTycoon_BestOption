@@ -207,10 +207,6 @@ function CalculateGames(plat_genre_data, plat_aud_data, topic_genre_data, topic_
   let scores_shuffled = shuffleWithinGroups(scores_unique); // shuffle the elements with the same score
   console.log(scores_shuffled);
 
-  // ADD MULTIGENRE
-  // ADD THE INFO ON THE DEVELOPMENT BELOW
-  // CHECK THAT THE EXPAND WORKS
-
   addScoresWebpage(scores_shuffled, genre_dev_data)
 
   // hide all the upper lists
@@ -240,21 +236,21 @@ function searchGames(){
                 .then(response => response.json())
                 .then(topic_audience_data => {
                   fetch(url_genres_development)
-                  .then(response => response.json())
-                  .then(genre_dev_data => {
-  
-                    CalculateGames( platform_genre_data, 
-                                    platform_audience_data, 
-                                    topic_genre_data, 
-                                    topic_audience_data, 
-                                    genre_dev_data,
-                                    statesBtnSys, 
-                                    statesBtnTpc)
-  
-                  })
-                  // .catch(error => {
-                  //   console.error('Error fetching genres & development:', error);
-                  // });
+                    .then(response => response.json())
+                    .then(genre_dev_data => {
+    
+                      CalculateGames( platform_genre_data, 
+                                      platform_audience_data, 
+                                      topic_genre_data, 
+                                      topic_audience_data, 
+                                      genre_dev_data,
+                                      statesBtnSys, 
+                                      statesBtnTpc)
+    
+                    })
+                    // .catch(error => {
+                    //   console.error('Error fetching genres & development:', error);
+                    // });
                 })
                 // .catch(error => {
                 //   console.error('Error fetching topics & audiences:', error);
@@ -287,7 +283,7 @@ function putScore(ind, item, parentElement){
   var appendElement = document.createElement('a');
   appendElement.className = 'expand';
   appendElement.id = 'btne-'+ind;
-  appendElement.onclick = function() { expandButtons('dev-phases'+ind, 'btne-'+ind); };
+  appendElement.onclick = function() { expandButtons('rdev'+ind, 'btne-'+ind); };
   appendElement.textContent = 'expand'
 
   divElement.appendChild(infoElement);
@@ -296,30 +292,62 @@ function putScore(ind, item, parentElement){
   parentElement.appendChild(divElement);
 }
 
-function putDevelopment(ind, item, parentElement){
+var firstPhase = ['Engine', 'Gameplay' ,'Story']
+var secondPhase = ['Dialogues', 'Level Design' ,'AI']
+var thirdPhase = ['World Design', 'Graphic' ,'Sound']
+
+function putDevelopment(ind, dev_data, parentElement){
+  var devContainerElement = document.createElement('div');
+  devContainerElement.className = 'results-dev';
+  devContainerElement.classList.add('hidden')
+  devContainerElement.id = 'rdev'+ind
+
   var devTitleElement = document.createElement('div');
   devTitleElement.className = 'result-dev-title';
 
-  ['Engine', 'Gameplay' ,'Story'].forEach(function(value) {
+  firstPhase.forEach(function(value) {
     var titleElement = document.createElement('a');
     titleElement.className = 'dev-title1';
     titleElement.textContent = value
     devTitleElement.appendChild(titleElement)
   });
-  ['Dialogues', 'Level Design' ,'AI'].forEach(function(value) {
+  secondPhase.forEach(function(value) {
     var titleElement = document.createElement('a');
     titleElement.className = 'dev-title2';
     titleElement.textContent = value
     devTitleElement.appendChild(titleElement)
   });
-  ['World Design', 'Graphic' ,'Sound'].forEach(function(value) {
+  thirdPhase.forEach(function(value) {
     var titleElement = document.createElement('a');
     titleElement.className = 'dev-title3';
     titleElement.textContent = value
     devTitleElement.appendChild(titleElement)
   });
 
-  parentElement.appendChild(devTitleElement);
+  var devValuesElement = document.createElement('div');
+  devValuesElement.className = 'result-dev';
+
+  console.log('--', dev_data)
+
+  for (const [devk, devv] of Object.entries(dev_data)) {
+    var valueElement = document.createElement('a');
+    console.log(firstPhase, devk, devk in firstPhase)
+    if (firstPhase.includes(devk)){
+      class_value = 'dev-name1'
+    }else if (secondPhase.includes(devk)){
+      class_value = 'dev-name2'
+    }else{
+      class_value = 'dev-name3'
+    }
+    
+    valueElement.className = class_value;
+    valueElement.textContent = devv
+    devValuesElement.appendChild(valueElement)
+  }
+
+  devContainerElement.appendChild(devTitleElement);
+  devContainerElement.appendChild(devValuesElement);
+  parentElement.appendChild(devContainerElement);
 }
 
 function addScoresWebpage(scores, genre_dev_data){
@@ -338,9 +366,7 @@ function addScoresWebpage(scores, genre_dev_data){
       putScore(ind, item, parentElement)
       genre = item[4]
       dev_data = genre_dev_data[genre]
-      console.log('aa', genre, dev_data)
-      console.log(item, ind)
-      putDevelopment(ind, item, parentElement)
+      putDevelopment(ind, dev_data, parentElement)
     }
   });
 }

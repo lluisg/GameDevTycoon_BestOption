@@ -1,5 +1,0 @@
-audiences=[
-    "Young", 
-    "Everyone", 
-    "Mature"
-]

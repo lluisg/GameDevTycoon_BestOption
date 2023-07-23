@@ -1,4 +1,0 @@
-topics = [
-    'Airplane',
-    'Aliens',
-]

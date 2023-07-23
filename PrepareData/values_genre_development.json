@@ -21,7 +21,7 @@
         "Graphic": "0.9",
         "Sound": "0.8"
     },
-    "Rpg": {
+    "RPG": {
         "Engine": "0.7",
         "Gameplay": "0.9",
         "Story": "1",

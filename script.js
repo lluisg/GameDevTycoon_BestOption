@@ -336,7 +336,9 @@ function addScoresWebpage(scores, genre_dev_data){
   scores.forEach((item, ind) => {
     if (ind < maxRecommended){
       putScore(ind, item, parentElement)
-      console.log('aa', genre_dev_data)
+      genre = item[4]
+      dev_data = genre_dev_data[genre]
+      console.log('aa', genre, dev_data)
       console.log(item, ind)
       putDevelopment(ind, item, parentElement)
     }

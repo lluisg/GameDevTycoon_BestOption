@@ -2,6 +2,7 @@ url_platforms_genres = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_B
 url_platforms_audiences = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_BestOption/main/PrepareData/values_platform_audiences.json"
 url_topics_genres = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_BestOption/main/PrepareData/values_topics_genres.json"
 url_topics_audiences = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_BestOption/main/PrepareData/values_topics_audiences.json"
+url_genres_development = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_BestOption/main/PrepareData/values_genre_development.json"
 
 // url_genre = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_BestOption/main/GetInfo/values_genre.json"
 // url_multigenre = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_BestOption/main/GetInfo/values_multigenre.json"
@@ -44,13 +45,15 @@ function createListButtons(parentElement, dataArray, nameClass) {
 }
 
 
-function expandButtons(elementID, currentElementID){
+function expandButtons(elementID, currentElementID, force_hide=false){
   let el = document.getElementById(elementID)
   let btn = document.getElementById(currentElementID)
   isHidden = el.classList.contains('hidden')
   if (isHidden){
-    el.classList.remove('hidden')
-    btn.innerHTML = 'hide'
+    if (force_hide == false ){ // force_hide makes it hide anyway
+      el.classList.remove('hidden')
+      btn.innerHTML = 'hide'  
+    }
   }else{
     el.classList.add('hidden')
     btn.innerHTML = 'expand'
@@ -102,8 +105,10 @@ function calculateScores(vsys_genre, vsys_aud, vtpc_genre, vtpc_aud){
           // console.log('genres', genre, plat_genre_value, topic_genre_value)
           // console.log('audiences', aud, plat_aud_value, topic_aud_value)
 
-          value_score = plat_genre_value * topic_genre_value * topic_aud_value
-          value_sell = value_score * plat_aud_value
+          let value_score = plat_genre_value * topic_genre_value * topic_aud_value
+          value_score = value_score.toFixed(2)
+          let value_sell = value_score * plat_aud_value
+          value_sell = value_sell.toFixed(2)
           scores.push([value_score, value_sell, platform, topic, genre, aud])
         }
       }
@@ -186,7 +191,7 @@ function shuffleWithinGroups(arrayOfArrays) {
 }
 
 
-function CalculateGames(plat_genre_data, plat_aud_data, topic_genre_data, topic_aud_data, statesBtnSys, statesBtnTpc){
+function CalculateGames(plat_genre_data, plat_aud_data, topic_genre_data, topic_aud_data, genre_dev_data, statesBtnSys, statesBtnTpc){
   valid_plat_genre = getValidValues(statesBtnSys, plat_genre_data)
   valid_plat_aud = getValidValues(statesBtnSys, plat_aud_data)
   valid_tpc_genre = getValidValues(statesBtnTpc, topic_genre_data)
@@ -206,7 +211,12 @@ function CalculateGames(plat_genre_data, plat_aud_data, topic_genre_data, topic_
   // ADD THE INFO ON THE DEVELOPMENT BELOW
   // CHECK THAT THE EXPAND WORKS
 
-  putScoresWebpage(scores_shuffled)
+  addScoresWebpage(scores_shuffled, genre_dev_data)
+
+  // hide all the upper lists
+  expandButtons('cbtns-sys', 'btne-sys', true)
+  expandButtons('cbtns-tpc', 'btne-tpc', true)
+
 }
 
 
@@ -229,14 +239,22 @@ function searchGames(){
               fetch(url_topics_audiences)
                 .then(response => response.json())
                 .then(topic_audience_data => {
-
-                  CalculateGames( platform_genre_data, 
-                                  platform_audience_data, 
-                                  topic_genre_data, 
-                                  topic_audience_data, 
-                                  statesBtnSys, 
-                                  statesBtnTpc)
-
+                  fetch(url_genres_development)
+                  .then(response => response.json())
+                  .then(genre_dev_data => {
+  
+                    CalculateGames( platform_genre_data, 
+                                    platform_audience_data, 
+                                    topic_genre_data, 
+                                    topic_audience_data, 
+                                    genre_dev_data,
+                                    statesBtnSys, 
+                                    statesBtnTpc)
+  
+                  })
+                  // .catch(error => {
+                  //   console.error('Error fetching genres & development:', error);
+                  // });
                 })
                 // .catch(error => {
                 //   console.error('Error fetching topics & audiences:', error);
@@ -257,7 +275,54 @@ function searchGames(){
 
 
 // ----------------------------------- PUT THE GAMES ON THE WEBSITE -----------------------------------
-function putScoresWebpage(scores){
+function putScore(ind, item, parentElement){
+  var divElement = document.createElement('div');
+  divElement.className = 'result';
+
+  var infoElement = document.createElement('div');
+  infoElement.className = 'result-info';
+
+  infoElement = addInfo2Table(item, infoElement)
+
+  var appendElement = document.createElement('a');
+  appendElement.className = 'expand';
+  appendElement.id = 'btne-'+ind;
+  appendElement.onclick = function() { expandButtons('dev-phases'+ind, 'btne-'+ind); };
+  appendElement.textContent = 'expand'
+
+  divElement.appendChild(infoElement);
+  divElement.appendChild(appendElement);
+
+  parentElement.appendChild(divElement);
+}
+
+function putDevelopment(ind, item, parentElement){
+  var devTitleElement = document.createElement('div');
+  devTitleElement.className = 'result-dev-title';
+
+  ['Engine', 'Gameplay' ,'Story'].forEach(function(value) {
+    var titleElement = document.createElement('a');
+    titleElement.className = 'dev-title1';
+    titleElement.textContent = value
+    devTitleElement.appendChild(titleElement)
+  });
+  ['Dialogues', 'Level Design' ,'AI'].forEach(function(value) {
+    var titleElement = document.createElement('a');
+    titleElement.className = 'dev-title2';
+    titleElement.textContent = value
+    devTitleElement.appendChild(titleElement)
+  });
+  ['World Design', 'Graphic' ,'Sound'].forEach(function(value) {
+    var titleElement = document.createElement('a');
+    titleElement.className = 'dev-title3';
+    titleElement.textContent = value
+    devTitleElement.appendChild(titleElement)
+  });
+
+  parentElement.appendChild(devTitleElement);
+}
+
+function addScoresWebpage(scores, genre_dev_data){
   const parentElement = document.getElementById("container-results");
 
   // detach previous shown results from parent
@@ -270,23 +335,10 @@ function putScoresWebpage(scores){
   // now add the new ones
   scores.forEach((item, ind) => {
     if (ind < maxRecommended){
-      var divElement = document.createElement('div');
-      divElement.className = 'result';
-
-      var infoElement = document.createElement('div');
-      infoElement.className = 'result-info';
-
-      infoElement = addInfo2Table(item, infoElement)
-
-      var appendElement = document.createElement('a');
-      appendElement.className = 'expand';
-      appendElement.id = 'btne-'+ind;
-      appendElement.onclick = function() { expandButtons('dev-phases'+ind, 'btne-'+ind); };
-
-      divElement.appendChild(infoElement);
-      divElement.appendChild(appendElement);
-
-      parentElement.appendChild(divElement);
+      putScore(ind, item, parentElement)
+      console.log('aa', genre_dev_data)
+      console.log(item, ind)
+      putDevelopment(ind, item, parentElement)
     }
   });
 }

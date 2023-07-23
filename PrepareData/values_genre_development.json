@@ -1,0 +1,68 @@
+{
+    "Action": {
+        "Engine": "1",
+        "Gameplay": "0.9",
+        "Story": "0.7",
+        "Dialogues": "0.6",
+        "Level Design": "0.9",
+        "AI": "1",
+        "World Design": "0.8",
+        "Graphic": "1",
+        "Sound": "0.9"
+    },
+    "Adventure": {
+        "Engine": "0.7",
+        "Gameplay": "0.8",
+        "Story": "1",
+        "Dialogues": "1",
+        "Level Design": "0.8",
+        "AI": "0.7",
+        "World Design": "1",
+        "Graphic": "0.9",
+        "Sound": "0.8"
+    },
+    "Rpg": {
+        "Engine": "0.7",
+        "Gameplay": "0.9",
+        "Story": "1",
+        "Dialogues": "1",
+        "Level Design": "0.9",
+        "AI": "0.8",
+        "World Design": "1",
+        "Graphic": "0.9",
+        "Sound": "0.8"
+    },
+    "Simulation": {
+        "Engine": "0.9",
+        "Gameplay": "1",
+        "Story": "0.8",
+        "Dialogues": "0.7",
+        "Level Design": "0.9",
+        "AI": "1",
+        "World Design": "0.8",
+        "Graphic": "0.9",
+        "Sound": "1"
+    },
+    "Strategy": {
+        "Engine": "0.9",
+        "Gameplay": "1",
+        "Story": "0.8",
+        "Dialogues": "0.7",
+        "Level Design": "1",
+        "AI": "0.9",
+        "World Design": "1",
+        "Graphic": "0.8",
+        "Sound": "0.9"
+    },
+    "Casual": {
+        "Engine": "0.6",
+        "Gameplay": "1",
+        "Story": "0.7",
+        "Dialogues": "0.7",
+        "Level Design": "1",
+        "AI": "0.6",
+        "World Design": "0.7",
+        "Graphic": "1",
+        "Sound": "0.9"
+    }
+}

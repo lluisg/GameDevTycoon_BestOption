@@ -9,7 +9,8 @@ https://gamedevtycoon.fandom.com/wiki/Raw_Data_for_Review_Algorithm/1.4.3#Topic_
 
 values platform/audience + platform/genre: https://steamcommunity.com/sharedfiles/filedetails/?id=176835673
 
-
+values genre/development:
+https://gamedevtycoon.fandom.com/wiki/Raw_Data_for_Review_Algorithm/1.4.3#Development_Weight_for_Tech_and_Design_Ratios
 
 
 

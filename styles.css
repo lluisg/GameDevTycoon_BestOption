@@ -58,6 +58,9 @@ h1{
   width: 35px;
   margin-right: 1rem;
 }
+.expand:hover{
+  cursor: pointer;
+}
 
 .container-btns{
   display: flex;
@@ -80,10 +83,6 @@ h1{
 
 .btn-select.on {
   background-color: #4CAF50;
-}
-
-#btne-tpc:hover, #btne-sys:hover, #btne-res:hover{
-  cursor: pointer;
 }
 
 /* ------------------ SEARCH ------------------ */
@@ -121,7 +120,7 @@ h1{
   margin: 0.8rem 0;
 }
 
-/* ------------------ SEPARATOR ------------------ */
+/* ------------------ RESULTS ------------------ */
 #container-results{
   width: 100%;
   display: flex;
@@ -150,25 +149,57 @@ h1{
   width: 120px;
 }
 
-.result-score1{
-  /* border: 2px solid gray; */
-}
-.result-score2{
-  /* border: 2px solid yellow; */
-}
-.result-platform{
-  /* border: 2px solid orange; */
-}
-.result-topic{
-  /* border: 2px solid purple; */
-}
-.result-genre{
-  /* border: 2px solid pink; */
-}
-.result-audience{
-  /* border: 2px solid green; */
+/* ------------------ DEVELOPMENT ------------------ */
+
+.results-dev{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
 }
 
+.result-dev{
+  display: flex;
+  font-size: 0.8rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.result-dev-title{
+  display: flex;
+  font-size: 0.8rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-weight: bold;
+}
+
+.dev-name1, .dev-title1, .dev-name2, .dev-title2, .dev-name3, .dev-title3{
+  margin: 0.5rem 0.5rem;
+  width: 80px;
+  text-align: center;
+  border-radius: 2px;
+  padding: 0.2rem;
+}
+.dev-title1{
+  background-color: rgba(0, 140, 20, 0.7);
+}
+.dev-name1{
+  background-color: rgba(0, 140, 20, 0.5);
+}
+
+.dev-title2{
+  background-color: rgba(0, 100, 200, 0.7);
+}
+.dev-name2{
+  background-color: rgba(0, 100, 200, 0.5);
+}
+
+.dev-title3{
+  background-color: rgba(220, 100, 0, 0.7);
+}
+.dev-name3{
+  background-color: rgba(220, 100, 0, 0.5);
+}
 
 
 

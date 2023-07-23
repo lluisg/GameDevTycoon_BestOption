@@ -1,0 +1,147 @@
+{
+    "Pc": {
+        "Young": "0.8",
+        "All": "0.9",
+        "Mature": "1"
+    },
+    "G64": {
+        "Young": "0.8",
+        "All": "0.9",
+        "Mature": "1"
+    },
+    "TES": {
+        "Young": "1",
+        "All": "0.9",
+        "Mature": "0.6"
+    },
+    "Master V": {
+        "Young": "0.9",
+        "All": "1",
+        "Mature": "0.7"
+    },
+    "Gameling": {
+        "Young": "1",
+        "All": "0.9",
+        "Mature": "0.6"
+    },
+    "Vena Gear": {
+        "Young": "0.9",
+        "All": "1",
+        "Mature": "0.8"
+    },
+    "Vena Oasis": {
+        "Young": "0.8",
+        "All": "1",
+        "Mature": "0.9"
+    },
+    "Super TES": {
+        "Young": "1",
+        "All": "0.9",
+        "Mature": "0.7"
+    },
+    "Playsystem": {
+        "Young": "0.8",
+        "All": "1",
+        "Mature": "0.9"
+    },
+    "TES 64": {
+        "Young": "1",
+        "All": "0.9",
+        "Mature": "0.9"
+    },
+    "Dreamvast": {
+        "Young": "0.7",
+        "All": "1",
+        "Mature": "1"
+    },
+    "Playsystem 0.9": {
+        "Young": "0.9",
+        "All": "1",
+        "Mature": "0.8"
+    },
+    "mBox": {
+        "Young": "0.8",
+        "All": "1",
+        "Mature": "0.9"
+    },
+    "Game Sphere": {
+        "Young": "0.9",
+        "All": "0.9",
+        "Mature": "0.8"
+    },
+    "GS": {
+        "Young": "1",
+        "All": "0.9",
+        "Mature": "0.8"
+    },
+    "PPS": {
+        "Young": "0.8",
+        "All": "0.9",
+        "Mature": "1"
+    },
+    "mBox 160": {
+        "Young": "0.8",
+        "All": "0.9",
+        "Mature": "1"
+    },
+    "Nuu": {
+        "Young": "1",
+        "All": "1",
+        "Mature": "0.7"
+    },
+    "Playsystem 1": {
+        "Young": "0.8",
+        "All": "1",
+        "Mature": "0.9"
+    },
+    "grPhone": {
+        "Young": "0.9",
+        "All": "1",
+        "Mature": "0.6"
+    },
+    "grPad": {
+        "Young": "0.9",
+        "All": "1",
+        "Mature": "0.6"
+    },
+    "mPad": {
+        "Young": "0.7",
+        "All": "0.9",
+        "Mature": "0.8"
+    },
+    "Wuu": {
+        "Young": "0.9",
+        "All": "1",
+        "Mature": "0.7"
+    },
+    "OYA": {
+        "Young": "0.8",
+        "All": "1",
+        "Mature": "0.9"
+    },
+    "mBox One": {
+        "Young": "0.7",
+        "All": "1",
+        "Mature": "0.8"
+    },
+    "Playsystem 4": {
+        "Young": "0.8",
+        "All": "1",
+        "Mature": "0.9"
+    },
+    "mBox Next": {
+        "Young": "0.9",
+        "All": "1",
+        "Mature": "0.8"
+    },
+    "Playsystem 5": {
+        "Young": "0.8",
+        "All": "1",
+        "Mature": "0.9"
+    },
+    "Swap": {
+        "Young": "0.9",
+        "All": "1",
+        "Mature": "0.8"
+    }
+}

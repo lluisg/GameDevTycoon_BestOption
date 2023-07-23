@@ -10,6 +10,11 @@
 <body>
   <h1>Which Game to Build?<a class="mini-title">Game Dev Tycoon</a></h1>
 
+  <div class="container-numRecommend">
+    <a class=""># recommendations</a>
+    <input id="inputRecommend" type="number" value="5">
+  </div>
+
   <div class="container-select">
     <div class="container-subtitle">
       <a class="subtitle">Systems</h3>
@@ -34,28 +39,32 @@
 
   <div class="separator"></div>
 
-  <div class="container-results">
-    <div class="result" id="names-results">
+  <div id="container-results">
+    <div class="resultexample" id="names-results">
       <div class="result-info">
         <a class="result-punctuation rslt-names">Punct.</a>
         <a class="result-console rslt-names">System</a>
         <a class="result-topic rslt-names">Topic</a>
         <a class="result-genre1 rslt-names">Genre</a>
         <a class="result-genre2 rslt-names">2nd Genre</a>
+        <a class="result-audience rslt-names">Audience</a>
       </div>
       <a class="expand"></a>  
     </div>
-    <div class="result">
+    <div class="separator" style="width: 90%;"></div>
+
+    <!-- <div class="result">
       <div class="result-info">
         <a class="result-punctuation">23</a>
         <a class="result-console">PC</a>
         <a class="result-topic">Comedy</a>
         <a class="result-genre1">Action</a>
         <a class="result-genre2">RPG</a>
+        <a class="result-audience">Adult</a>
       </div>
       <a class="expand" id="btne-res" onclick="expandButtons('dev-phases', 'btne-res')">expand</a>  
-    </div>
-    <div class="hide" id="dev-phases">
+    </div> -->
+    <!-- <div class="hide" id="dev-phases"> -->
 
     </div>
   </div>

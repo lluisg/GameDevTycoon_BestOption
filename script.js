@@ -8,7 +8,7 @@ fetch(url_system)
   .then(response => response.json())
   .then(data => {
     const el = document.getElementById("cbtns-sys");
-    createListItems(el, Object.keys(data), 'sys-btn');
+    createListButtons(el, Object.keys(data), 'sys-btn');
   })
   .catch(error => {
     console.error('Error fetching the first system:', error);
@@ -18,14 +18,14 @@ fetch(url_topic)
 .then(response => response.json())
 .then(data => {
   const el = document.getElementById("cbtns-tpc");
-  createListItems(el, Object.keys(data), 'tpc-btn');
+  createListButtons(el, Object.keys(data), 'tpc-btn');
 })
 .catch(error => {
   console.error('Error fetching the first topic:', error);
 });
   
 
-function createListItems(parentElement, dataArray, nameClass) {
+function createListButtons(parentElement, dataArray, nameClass) {
   dataArray.forEach(item => {
     var btnElement = document.createElement('button');
 
@@ -80,30 +80,81 @@ function getValidValues(states, data){
   return valid
 }
 
-function calculateBestGames(vsys, vtpc){
+function calculateScores(vsys, vtpc){
+  scores = []
 
   for (const [sysk, sysv] of Object.entries(vsys)) {
-    console.log('k:', sysk, ', v:', sysv)
+    for (const [tpck, tpcv] of Object.entries(vtpc)) {
+      // console.log('k:', sysk, ', v:', sysv)
+      // console.log('k:', tpck, ', v:', tpcv)
+      for (const [genrek, genresys] of Object.entries(sysv['Genres'])) {
+        for (const [audk, audsys] of Object.entries(sysv['Audiences'])) {
+          genretpc = tpcv['Genres'][genrek]
+          audtpc = tpcv['Audiences'][audk]
+          // console.log(genrek, genrev)
+          // console.log(audk, audv)
+
+          value_score = genresys * genretpc + audsys * audtpc
+          scores.push([value_score, sysk, tpck, genrek, audk])
+        }
+      }
+    }
   }
 
-  // genre sys * genre tpc + aud sys * aud tpc
+  return scores  
+}
 
-
-  // system topic 
-  // audience genre 
-
+function compareFirstValue(a, b) {
+  const firstValueA = a[0];
+  const firstValueB = b[0];
   
+  if (firstValueA < firstValueB) {
+    return 1;
+  } else if (firstValueA > firstValueB) {
+    return -1;
+  } else {
+    return 0;
+  }
+}
+
+
+function removeSameTopicGenre(scores){
+  topics_used = []
+  unique_games = []
+
+  scores.forEach(element => {
+    [scores, sysk, tpck, genrek, audk] = element
+    genretopic = genrek +'/'+ tpck
+    if (!topics_used.includes(genretopic)){
+      unique_games.push(element)
+      topics_used.push(genretopic)
+    }
+  });
+  return unique_games
 }
 
 function CalculateGames(sys_data, topic_data, genre_data, multigenre_data, statesBtnSys, statesBtnTpc){
   valid_sys = getValidValues(statesBtnSys, sys_data)
   valid_tpc = getValidValues(statesBtnTpc, topic_data)
 
-  best_games = calculateBestGames(valid_sys, valid_tpc)
+  scores_games = calculateScores(valid_sys, valid_tpc)
+  scores_ord = scores_games.sort(compareFirstValue);
+  console.log(scores_ord)
+
+  scores_unique = removeSameTopicGenre(scores_ord)
+  // ADD MULTIGENRE
+  // ADD SOME RANDOMNESS
+  // ADD THE INFO ON THE DEVELOPMENT BELOW
+  // CHECK THAT THE EXPAND WORKS
+
+  putScoresWebpage(scores_unique)
+
 }
 
-
+var maxRecommended;
 function searchGames(){
+  maxRecommended = document.getElementById('inputRecommend').value;
+
   statesBtnSys = saveButtonStates('sys-btn')
   statesBtnTpc = saveButtonStates('tpc-btn')
 
@@ -123,19 +174,93 @@ function searchGames(){
                   CalculateGames(sys_data, topic_data, genre_data, multigenre_data, statesBtnSys, statesBtnTpc)
 
                 })
-                .catch(error => {
-                  console.error('Error fetching multigenres:', error);
-                });
+                // .catch(error => {
+                //   console.error('Error fetching multigenres:', error);
+                // });
             })
-            .catch(error => {
-              console.error('Error fetching the genres:', error);
-            });
+            // .catch(error => {
+            //   console.error('Error fetching the genres:', error);
+            // });
         })
-        .catch(error => {
-          console.error('Error fetching the topics:', error);
-        });
+        // .catch(error => {
+        //   console.error('Error fetching the topics:', error);
+        // });
     })
-    .catch(error => {
-      console.error('Error fetching the systems:', error);
-    });
+    // .catch(error => {
+    //   console.error('Error fetching the systems:', error);
+    // });
+}
+
+// ----------------------------------- PUT THE GAMES ON THE WEBSITE -----------------------------------
+
+function putScoresWebpage(scores){
+  const parentElement = document.getElementById("container-results");
+
+  // detach previous shown results from parent
+  var results = parentElement.getElementsByClassName('result');
+  var resultsArray = Array.from(results);
+  resultsArray.forEach(function(result) {
+    parentElement.removeChild(result);
+  });
+
+  // now add the new ones
+  scores.forEach((item, ind) => {
+    if (ind < maxRecommended){
+      var divElement = document.createElement('div');
+      divElement.className = 'result';
+
+      var infoElement = document.createElement('div');
+      infoElement.className = 'result-info';
+
+      infoElement = addInfo2Table(item, infoElement)
+
+      var appendElement = document.createElement('a');
+      appendElement.className = 'expand';
+      appendElement.id = 'btne-'+ind;
+      appendElement.onclick = function() { expandButtons('dev-phases'+ind, 'btne-'+ind); };
+
+      divElement.appendChild(infoElement);
+      divElement.appendChild(appendElement);
+
+      parentElement.appendChild(divElement);
+    }
+  });
+}
+
+function addInfo2Table(info, table){
+  [scores, sysk, tpck, genrek, audk] = info
+
+  var score_a = document.createElement('a');
+  score_a.className = 'result-punctuation';
+  score_a.textContent = scores
+
+  var sys_a = document.createElement('a');
+  sys_a.className = 'result-console';
+  sys_a.textContent = sysk
+
+  var topic_a = document.createElement('a');
+  topic_a.className = 'result-topic';
+  topic_a.textContent = tpck
+
+  var genre1_a = document.createElement('a');
+  genre1_a.className = 'result-genre1';
+  genre1_a.textContent = genrek
+
+  var genre2_a = document.createElement('a');
+  genre2_a.className = 'result-genre2';
+  genre2_a.textContent = 'Other'
+
+  var aud_a = document.createElement('a');
+  aud_a.className = 'result-audience';
+  aud_a.textContent = audk
+
+
+  table.appendChild(score_a)
+  table.appendChild(sys_a)
+  table.appendChild(topic_a)
+  table.appendChild(genre1_a)
+  table.appendChild(genre2_a)
+  table.appendChild(aud_a)
+
+  return table
 }

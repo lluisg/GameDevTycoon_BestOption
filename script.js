@@ -376,3 +376,33 @@ function addInfo2Table(info, table){
 
   return table
 }
+
+
+// ----------------------------------- UPDATE TEXT ON SIZE -----------------------------------
+function updateText() {
+  var screenWidth = window.innerWidth;
+  if (screenWidth < 545) {
+    document.getElementById('scr1').textContent = 'Scr.1';
+    document.getElementById('scr2').textContent = 'Scr.2';
+  } else {
+    document.getElementById('scr1').textContent = 'Score 1';
+    document.getElementById('scr2').textContent = 'Score 2';
+  }
+
+  if (screenWidth < 400) {
+    document.getElementById('aud').textContent = 'A.';
+  } else if (screenWidth < 690) {
+    document.getElementById('aud').textContent = 'Aud.';
+  } else {
+    document.getElementById('aud').textContent = 'Audience';
+  }
+
+}
+
+// Call the function initially to set the default text
+updateText();
+
+// Call the function whenever the window is resized
+window.addEventListener('resize', function() {
+  updateText();
+});

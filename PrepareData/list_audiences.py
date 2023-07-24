@@ -1,5 +1,5 @@
 audiences = [
-    'Young',
-    'All',
-    'Mature',
+    'Y',
+    'A',
+    'M',
 ]

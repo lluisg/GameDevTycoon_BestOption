@@ -157,7 +157,7 @@ h1{
 
 /* ------------------ RESULTS ------------------ */
 #container-results{
-  width: 95%;
+  width: 98%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -177,10 +177,13 @@ h1{
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin: 0.2rem 0;
   border: 2px solid orange;
 }
 .result-score1, .result-score2, .result-platform, .result-topic, .result-genre, .result-audience{
   font-size: 1.1rem;
+  position: relative;
+  margin: 0;
   border: 2px solid red;
 }
 .result-score1, .result-score2{
@@ -196,7 +199,7 @@ h1{
   width: 100px;
 }
 .result-audience{
-  width: 85px;
+  width: 75px;
 }
 
 .expand2{
@@ -208,28 +211,56 @@ h1{
   cursor: pointer;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 690px) {
   .result-score1, .result-score2, .result-platform, .result-topic, .result-genre, .result-audience{
     font-size: 1rem;
   }
+  .result-score1, .result-score2{
+    width: 50px;
+  }
+  .result-platform{
+    width: 90px;
+  }
+  .result-topic{
+    width: 120px;
+  }
+  .result-genre{
+    width: 80px;
+  }
+  .result-audience{
+    width: 35px;
+  }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 545px) {
   .result-score1, .result-score2, .result-platform, .result-topic, .result-genre, .result-audience{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+  }
+  .result-score1, .result-score2{
+    width: 30px;
+  }
+  .result-platform{
+    width: 70px;
+  }
+  .result-topic{
+    width: 90px;
+  }
+  .result-genre{
+    width: 60px;
+  }
+  .result-audience{
+    width: 30px;
   }
   .expand2{
     width: 30px;
   }
 }
-/* 
-@media (max-width: 576px) {
-  .result-info{
-    width: calc(100% - 20px);
+
+@media (max-width: 400px) {
+  .result-audience{
+    width: 13px;
   }
-  .result-score1, .result-score2, .result-platform, .result-topic, .result-genre, .result-audience{
-    width: calc((100% - 20px)/6);
-  }
-} */
+}
 
 /* ------------------ DEVELOPMENT ------------------ */
 

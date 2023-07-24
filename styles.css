@@ -33,6 +33,21 @@ h1{
   width: 40px;
 }
 
+/* ------------------ HINTS ------------------ */
+.list-hints li{
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+@media (max-width: 576px) {
+  .list-hints{
+    padding-left: 0.5rem ;
+  }
+  .list-hints li{
+    font-size: 0.8rem;
+    color: blue;
+  }
+}
+
 /* ------------------ BUTTONS ------------------ */
 .container-select{
   width: 95%;
@@ -85,6 +100,21 @@ h1{
   background-color: #4CAF50;
 }
 
+@media (max-width: 576px) {
+  .subtitle{
+    font-size: 1rem;
+    padding: 0.1rem 0.6rem;
+  }
+  .expand{
+    margin-right: 0.6rem;
+  }
+  .btn-select {
+    width: 70px;
+    height: 35px;
+    font-size: 0.6rem;
+  }
+}
+
 /* ------------------ SEARCH ------------------ */
 .container-search {
   display: flex;
@@ -119,35 +149,87 @@ h1{
   height: 2px;
   margin: 0.8rem 0;
 }
+@media (max-width: 576px) {
+  .separator{
+    height: 1px;
+  }
+}
 
 /* ------------------ RESULTS ------------------ */
 #container-results{
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
   margin: 1rem 0;
 }
 .result, .resultexample{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
 }
 .rslt-names{
   font-weight: bold;
-
 }
 .result-info{
+  flex-grow: 1;
   display: flex;
-  font-size: 1rem;
   flex-direction: row;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  border: 2px solid orange;
 }
 .result-score1, .result-score2, .result-platform, .result-topic, .result-genre, .result-audience{
-  margin: 0.5rem 1.2rem;
-  width: 120px;
+  font-size: 1.1rem;
+  border: 2px solid red;
 }
+.result-score1, .result-score2{
+  width: 70px;
+}
+.result-platform{
+  width: 110px;
+}
+.result-topic{
+  width: 140px;
+}
+.result-genre{
+  width: 100px;
+}
+.result-audience{
+  width: 85px;
+}
+
+.expand2{
+  width: 35px;
+  font-size: 0.6rem;
+  border: 2px solid blue;
+}
+.expand2:hover{
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .result-score1, .result-score2, .result-platform, .result-topic, .result-genre, .result-audience{
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .result-score1, .result-score2, .result-platform, .result-topic, .result-genre, .result-audience{
+    font-size: 0.9rem;
+  }
+  .expand2{
+    width: 30px;
+  }
+}
+/* 
+@media (max-width: 576px) {
+  .result-info{
+    width: calc(100% - 20px);
+  }
+  .result-score1, .result-score2, .result-platform, .result-topic, .result-genre, .result-audience{
+    width: calc((100% - 20px)/6);
+  }
+} */
 
 /* ------------------ DEVELOPMENT ------------------ */
 

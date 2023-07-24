@@ -4,9 +4,6 @@ url_topics_genres = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_Best
 url_topics_audiences = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_BestOption/main/PrepareData/values_topics_audiences.json"
 url_genres_development = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_BestOption/main/PrepareData/values_genre_development.json"
 
-// url_genre = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_BestOption/main/GetInfo/values_genre.json"
-// url_multigenre = "https://raw.githubusercontent.com/lluisg/GameDevTycoon_BestOption/main/GetInfo/values_multigenre.json"
-
 // Fetch the JSON data using an HTTP request
 fetch(url_platforms_genres)
   .then(response => response.json())
@@ -52,11 +49,11 @@ function expandButtons(elementID, currentElementID, force_hide=false){
   if (isHidden){
     if (force_hide == false ){ // force_hide makes it hide anyway
       el.classList.remove('hidden')
-      btn.innerHTML = 'hide'  
+      btn.textContent = 'hide'  
     }
   }else{
     el.classList.add('hidden')
-    btn.innerHTML = 'expand'
+    btn.textContent = 'expand'
   }
 }
 
@@ -72,8 +69,6 @@ function saveButtonStates(className) {
     const isToggledOn = button.classList.contains('on');
     buttonStates[buttonId] = isToggledOn;
   });
-
-  // console.log(buttonStates);
   return buttonStates
 }
 
@@ -101,9 +96,6 @@ function calculateScores(vsys_genre, vsys_aud, vtpc_genre, vtpc_aud){
         for (const [aud, plat_aud_value] of Object.entries(platform_audience_values)) {
           topic_genre_value = topic_genre_values[genre]
           topic_aud_value = topic_audience_values[aud]
-
-          // console.log('genres', genre, plat_genre_value, topic_genre_value)
-          // console.log('audiences', aud, plat_aud_value, topic_aud_value)
 
           let value_score = plat_genre_value * topic_genre_value * topic_aud_value
           value_score = value_score.toFixed(2)
@@ -198,21 +190,15 @@ function CalculateGames(plat_genre_data, plat_aud_data, topic_genre_data, topic_
   valid_tpc_aud = getValidValues(statesBtnTpc, topic_aud_data)
 
   let scores_games = calculateScores(valid_plat_genre, valid_plat_aud, valid_tpc_genre, valid_tpc_aud)
-  console.log('scores', scores_games)
   let scores_ord = scores_games.sort(orderScoresGames);
-  console.log('ordered', scores_ord)
   let scores_unique = removeSameTopicGenre(scores_ord) // only keep the first with the same topic/genre
-  console.log('unique', scores_unique)
-
   let scores_shuffled = shuffleWithinGroups(scores_unique); // shuffle the elements with the same score
-  console.log(scores_shuffled);
 
   addScoresWebpage(scores_shuffled, genre_dev_data)
 
   // hide all the upper lists
   expandButtons('cbtns-sys', 'btne-sys', true)
   expandButtons('cbtns-tpc', 'btne-tpc', true)
-
 }
 
 
@@ -248,25 +234,10 @@ function searchGames(){
                                       statesBtnTpc)
     
                     })
-                    // .catch(error => {
-                    //   console.error('Error fetching genres & development:', error);
-                    // });
                 })
-                // .catch(error => {
-                //   console.error('Error fetching topics & audiences:', error);
-                // });
             })
-            // .catch(error => {
-            //   console.error('Error fetching the topics & genres:', error);
-            // });
         })
-        // .catch(error => {
-        //   console.error('Error fetching the platforms & audiences:', error);
-        // });
     })
-    // .catch(error => {
-    //   console.error('Error fetching the platforms & genres:', error);
-    // });
 }
 
 
@@ -281,7 +252,7 @@ function putScore(ind, item, parentElement){
   infoElement = addInfo2Table(item, infoElement)
 
   var appendElement = document.createElement('a');
-  appendElement.className = 'expand';
+  appendElement.className = 'expand2';
   appendElement.id = 'btne-'+ind;
   appendElement.onclick = function() { expandButtons('rdev'+ind, 'btne-'+ind); };
   appendElement.textContent = 'expand'
@@ -327,11 +298,8 @@ function putDevelopment(ind, dev_data, parentElement){
   var devValuesElement = document.createElement('div');
   devValuesElement.className = 'result-dev';
 
-  console.log('--', dev_data)
-
   for (const [devk, devv] of Object.entries(dev_data)) {
     var valueElement = document.createElement('a');
-    console.log(firstPhase, devk, devk in firstPhase)
     if (firstPhase.includes(devk)){
       class_value = 'dev-name1'
     }else if (secondPhase.includes(devk)){
@@ -398,7 +366,6 @@ function addInfo2Table(info, table){
   var aud_a = document.createElement('a');
   aud_a.className = 'result-audience';
   aud_a.textContent = audience
-
 
   table.appendChild(score1_a)
   table.appendChild(score2_a)

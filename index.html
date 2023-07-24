@@ -17,10 +17,28 @@
 
   <div class="container-select">
     <div class="container-subtitle">
+      <a class="subtitle">Hints</h3>
+      <a class="expand" id="btne-hints" onclick="expandButtons('cbtns-hints', 'btne-hints')">expand</a>  
+    </div>
+    <div class="container-hints hidden" id="cbtns-hints">
+      <ul class="list-hints">
+        <li>Do not repeat the same Genre/Topic in two consecutive games</li>
+        <li>Do sequels when the Game Engine is updated since the original</li>
+        <li>Score 1 (Scoring Value) = Platform/Genre * Topic/Genre * Genre/Audience</li>
+        <li>Score 2(Selling Value) = Score 1 * Platform/Audience</li>
+        <li>For the development:<br>
+          &emsp; Assign &gt; 40% of the time of the Phase if the Design Goal &gt;= 0.9<br>
+          &emsp; Assign &lt; 40% of the time of the Phase if the Design Goal &lt; 0.8</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container-select">
+    <div class="container-subtitle">
       <a class="subtitle">Systems</h3>
       <a class="expand" id="btne-sys" onclick="expandButtons('cbtns-sys', 'btne-sys')">hide</a>  
     </div>
-    <div class="container-btns" id="cbtns-sys">
+    <div class="container-btns hidden" id="cbtns-sys">
     </div>
   </div>
 
@@ -29,7 +47,7 @@
       <a class="subtitle">Topics</h3>
       <a class="expand" id="btne-tpc" onclick="expandButtons('cbtns-tpc', 'btne-tpc')">hide</a>  
     </div>
-    <div class="container-btns" id="cbtns-tpc">
+    <div class="container-btns hidden" id="cbtns-tpc">
     </div>
   </div>
 
@@ -42,16 +60,16 @@
   <div id="container-results">
     <div class="resultexample" id="names-results">
       <div class="result-info">
-        <a class="result-score1 rslt-names">Eval. Score</a>
-        <a class="result-score2 rslt-names">Sell Score</a>
+        <a class="result-score1 rslt-names">Score 1</a>
+        <a class="result-score2 rslt-names">Score 2</a>
         <a class="result-platform rslt-names">Platform</a>
         <a class="result-topic rslt-names">Topic</a>
         <a class="result-genre rslt-names">Genre</a>
         <a class="result-audience rslt-names">Audience</a>
       </div>
-      <a class="expand"></a>  
+      <a class="expand2"></a>  
     </div>
-    <div class="separator" style="width: 90%;"></div>
+    <div class="separator" style="width:95%;"></div>
 
     <!-- <div class="result">
       <div class="result-info">

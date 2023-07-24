@@ -14,25 +14,6 @@ https://gamedevtycoon.fandom.com/wiki/Raw_Data_for_Review_Algorithm/1.4.3#Develo
 
 
 
-not recommended with multi genre
-not repeat same genre/topic
-sequels with updated motors/graph
-
-
-
-assign > 40% design goal >= 0.9 and < 40% design goal < 0.8
-
-score 1 with selling possibility:
-platform/genre*topic/genre*genre/audience
-
-score 2 (sells):
-score1 * platform/audience
-
-
-
-
-
-
 
 
 

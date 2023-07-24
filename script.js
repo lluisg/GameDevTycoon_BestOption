@@ -268,53 +268,110 @@ var secondPhase = ['Dialogues', 'Level Design' ,'AI']
 var thirdPhase = ['World Design', 'Graphic' ,'Sound']
 
 function putDevelopment(ind, dev_data, parentElement){
+  // <div class="results-dev hidden" id="rdev">
+  //   <div class="results-phase1">
+  //     <div class="result-dev-title">
+  //       <a class="dev-title1">Engine</a>
+  //       <a class="dev-title1">Gameplay</a>
+  //       <a class="dev-title1">Story</a>
+  //     </div>
+  //     <div class="result-dev">
+  //       <a class="dev-name1">0.9</a>
+  //       <a class="dev-name1">0.7</a>
+  //       <a class="dev-name1">0.6</a>
+  //     </div>  
+  //   </div>
+  //   ...
+
   var devContainerElement = document.createElement('div');
   devContainerElement.className = 'results-dev';
   devContainerElement.classList.add('hidden')
   devContainerElement.id = 'rdev'+ind
 
-  var devTitleElement = document.createElement('div');
-  devTitleElement.className = 'result-dev-title';
+  // -- phase 1 --
+  let phase1Element = document.createElement('div');
+  phase1Element.className = 'results-phase1';
 
+  var devTitleElement1 = document.createElement('div');
+  devTitleElement1.className = 'result-dev-title';
   firstPhase.forEach(function(value) {
     var titleElement = document.createElement('a');
     titleElement.className = 'dev-title1';
     titleElement.textContent = value
-    devTitleElement.appendChild(titleElement)
+    devTitleElement1.appendChild(titleElement)
   });
+
+  var devValuesElement1 = document.createElement('div');
+  devValuesElement1.className = 'result-dev';
+  for (const [devk, devv] of Object.entries(dev_data)) {
+    var valueElement = document.createElement('a');
+    if (firstPhase.includes(devk)){
+      valueElement.className = 'dev-name1';
+      valueElement.textContent = devv
+      devValuesElement1.appendChild(valueElement)    
+    }
+  }
+
+  phase1Element.appendChild(devTitleElement1);
+  phase1Element.appendChild(devValuesElement1);
+  devContainerElement.appendChild(phase1Element)
+
+  // -- phase 2 --
+  var phase2Element = document.createElement('div');
+  phase2Element.className = 'results-phase2';
+
+  var devTitleElement2 = document.createElement('div');
+  devTitleElement2.className = 'result-dev-title';
   secondPhase.forEach(function(value) {
     var titleElement = document.createElement('a');
     titleElement.className = 'dev-title2';
     titleElement.textContent = value
-    devTitleElement.appendChild(titleElement)
+    devTitleElement2.appendChild(titleElement)
   });
+
+  var devValuesElement2 = document.createElement('div');
+  devValuesElement2.className = 'result-dev';
+  for (const [devk, devv] of Object.entries(dev_data)) {
+    var valueElement = document.createElement('a');
+    if (secondPhase.includes(devk)){
+      valueElement.className = 'dev-name2';
+      valueElement.textContent = devv
+      devValuesElement2.appendChild(valueElement)    
+    }
+  }
+
+  phase2Element.appendChild(devTitleElement2);
+  phase2Element.appendChild(devValuesElement2);
+  devContainerElement.appendChild(phase2Element)
+
+  // -- phase 3 --
+  var phase3Element = document.createElement('div');
+  phase3Element.className = 'results-phase3';
+
+  var devTitleElement3 = document.createElement('div');
+  devTitleElement3.className = 'result-dev-title';
   thirdPhase.forEach(function(value) {
     var titleElement = document.createElement('a');
     titleElement.className = 'dev-title3';
     titleElement.textContent = value
-    devTitleElement.appendChild(titleElement)
+    devTitleElement3.appendChild(titleElement)
   });
 
-  var devValuesElement = document.createElement('div');
-  devValuesElement.className = 'result-dev';
-
+  var devValuesElement3 = document.createElement('div');
+  devValuesElement3.className = 'result-dev';
   for (const [devk, devv] of Object.entries(dev_data)) {
     var valueElement = document.createElement('a');
-    if (firstPhase.includes(devk)){
-      class_value = 'dev-name1'
-    }else if (secondPhase.includes(devk)){
-      class_value = 'dev-name2'
-    }else{
-      class_value = 'dev-name3'
+    if (thirdPhase.includes(devk)){
+      valueElement.className = 'dev-name3';
+      valueElement.textContent = devv
+      devValuesElement3.appendChild(valueElement)    
     }
-    
-    valueElement.className = class_value;
-    valueElement.textContent = devv
-    devValuesElement.appendChild(valueElement)
   }
 
-  devContainerElement.appendChild(devTitleElement);
-  devContainerElement.appendChild(devValuesElement);
+  phase3Element.appendChild(devTitleElement3);
+  phase3Element.appendChild(devValuesElement3);
+  devContainerElement.appendChild(phase3Element)
+
   parentElement.appendChild(devContainerElement);
 }
 
@@ -389,12 +446,30 @@ function updateText() {
     document.getElementById('scr2').textContent = 'Score 2';
   }
 
-  if (screenWidth < 400) {
+  if (screenWidth < 430) {
     document.getElementById('aud').textContent = 'A.';
   } else if (screenWidth < 690) {
     document.getElementById('aud').textContent = 'Aud.';
   } else {
     document.getElementById('aud').textContent = 'Audience';
+  }
+
+  var expands = document.getElementsByClassName('expand2')
+  for (var i = 0; i < expands.length; i++) {
+    let expand = expands.item(i)
+    if (screenWidth < 430) {
+      if (expand.textContent == 'expand' || expand.textContent == 'E'){
+        expand.textContent = 'E';
+      }else{
+        expand.textContent = 'H';
+      }
+    } else {
+      if (expand.textContent == 'expand' || expand.textContent == 'E'){
+        expand.textContent = 'expand';
+      }else{
+        expand.textContent = 'hide';
+      }
+    }
   }
 
 }

@@ -69,10 +69,12 @@ h1{
   font-weight: bold;
   padding: 0.1rem 1rem;
 }
-.expand, .expand2{
+.expand, .expand2, .expand3{
   width: 40px;
   height: 13px;
-  border: 1px solid black;
+}
+.expand, .expand2{
+    border: 1px solid black;
   background-color: rgba(150, 50, 0, 0.3);
   border-radius: 3px;
   text-align: center;
@@ -171,7 +173,17 @@ h1{
   overflow: hidden;
   margin: 1rem 0;
 }
-.result, .resultexample{
+
+.container-info{
+  display: flex;
+  flex-direction: column;
+  width: 99%;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.results, .resultexample{
   display: flex;
   width: 100%;
 }
@@ -207,7 +219,7 @@ h1{
   width: 75px;
 }
 
-.expand2{
+.expand2, .expand3{
   width: 35px;
   font-size: 0.6rem;
 }
@@ -255,7 +267,7 @@ h1{
   .result-audience{
     width: 30px;
   }
-  .expand2{
+  .expand2, .expand3{
     width: 30px;
   }
 }
@@ -264,7 +276,7 @@ h1{
   .result-audience{
     width: 13px;
   }
-  .expand2{
+  .expand2, .expand3{
     width: 15px;
     margin: 0 2px;
   }

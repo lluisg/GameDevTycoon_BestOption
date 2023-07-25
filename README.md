@@ -13,7 +13,7 @@ values genre/development:
 https://gamedevtycoon.fandom.com/wiki/Raw_Data_for_Review_Algorithm/1.4.3#Development_Weight_for_Tech_and_Design_Ratios
 
 
-
+deploy simple page: https://community.render.com/t/how-to-host-a-simple-index-html-file-as-a-static-site/5734
 
 
 

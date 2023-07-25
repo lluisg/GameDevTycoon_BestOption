@@ -49,11 +49,19 @@ function expandButtons(elementID, currentElementID, force_hide=false){
   if (isHidden){
     if (force_hide == false ){ // force_hide makes it hide anyway
       el.classList.remove('hidden')
-      btn.textContent = 'hide'  
+      if (screenWidth < 430) {
+        btn.textContent = 'H'
+      }else{
+        btn.textContent = 'hide'
+      }  
     }
   }else{
     el.classList.add('hidden')
-    btn.textContent = 'expand'
+    if (screenWidth < 430) {
+      btn.textContent = 'E'
+    }else{
+      btn.textContent = 'expand'
+    }  
   }
 }
 
@@ -206,6 +214,8 @@ var maxRecommended;
 function searchGames(){
   maxRecommended = document.getElementById('inputRecommend').value;
 
+
+
   statesBtnSys = saveButtonStates('sys-btn')
   statesBtnTpc = saveButtonStates('tpc-btn')
 
@@ -244,7 +254,7 @@ function searchGames(){
 // ----------------------------------- PUT THE GAMES ON THE WEBSITE -----------------------------------
 function putScore(ind, item, parentElement){
   var divElement = document.createElement('div');
-  divElement.className = 'result';
+  divElement.className = 'results';
 
   var infoElement = document.createElement('div');
   infoElement.className = 'result-info';
@@ -379,8 +389,8 @@ function addScoresWebpage(scores, genre_dev_data){
   const parentElement = document.getElementById("container-results");
 
   // detach previous shown results from parent
-  var results = parentElement.getElementsByClassName('result');
-  var resultsArray = Array.from(results);
+  var container_results = parentElement.getElementsByClassName('container-info');
+  var resultsArray = Array.from(container_results);
   resultsArray.forEach(function(result) {
     parentElement.removeChild(result);
   });
@@ -388,10 +398,14 @@ function addScoresWebpage(scores, genre_dev_data){
   // now add the new ones
   scores.forEach((item, ind) => {
     if (ind < maxRecommended){
-      putScore(ind, item, parentElement)
+      let container_results = document.createElement('div');
+      container_results.className = 'container-info'
+
+      putScore(ind, item, container_results)
       genre = item[4]
       dev_data = genre_dev_data[genre]
-      putDevelopment(ind, dev_data, parentElement)
+      putDevelopment(ind, dev_data, container_results)
+      parentElement.appendChild(container_results)
     }
   });
 }

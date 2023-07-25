@@ -1,5 +1,5 @@
 platforms = [
-    'Pc',
+    'PC',
     'G64',
     'TES',
     'Master V',

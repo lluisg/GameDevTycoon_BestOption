@@ -1,59 +1,24 @@
 # GameDevTycoon_BestOption
 
+Development and programming of a simple website to obtain the best game possible with the combination available at the moment, as defined by the user.
 
-values topic/genre:
-https://gamedevtycoon.fandom.com/wiki/Raw_Data_for_Review_Algorithm/1.4.3#Topic_Genre_Combinations
+Programmed with HTML, CSS and JS.
 
-values topic/audiences:
-https://gamedevtycoon.fandom.com/wiki/Raw_Data_for_Review_Algorithm/1.4.3#Topic_Audience_Combinations
+## Formula
 
-values platform/audience + platform/genre: https://steamcommunity.com/sharedfiles/filedetails/?id=176835673
+The two scores to evaluate the different games are:
 
-values genre/development:
-https://gamedevtycoon.fandom.com/wiki/Raw_Data_for_Review_Algorithm/1.4.3#Development_Weight_for_Tech_and_Design_Ratios
+- Score 1 (Scoring Value) = Platform/Genre _ Topic/Genre _ Genre/Audience
+- Score 2(Selling Value) = Score 1 \* Platform/Audience
 
+Additionally, you can visualise the development values on the games found, which you can use to distribute the time on each phase.
 
-deploy simple page: https://community.render.com/t/how-to-host-a-simple-index-html-file-as-a-static-site/5734
+The formula and results obtained are based on version 1.6. And the information is obtained from the following links:
+[Topic/Genre values](https://gamedevtycoon.fandom.com/wiki/Raw_Data_for_Review_Algorithm/1.4.3#Topic_Genre_Combinations)
+[Topic/Audience values](https://gamedevtycoon.fandom.com/wiki/Raw_Data_for_Review_Algorithm/1.4.3#Topic_Audience_Combinations)
+[Genre/Development values](https://gamedevtycoon.fandom.com/wiki/Raw_Data_for_Review_Algorithm/1.4.3#Development_Weight_for_Tech_and_Design_Ratios)
+[Platform/Audience + Platform/Genre values](https://steamcommunity.com/sharedfiles/filedetails/?id=176835673)
 
+Website deployed on [Render](https://community.render.com/t/how-to-host-a-simple-index-html-file-as-a-static-site/5734)
 
-
-
-
-
---------------- DATOS EXTRA -----------------------------------------------------------
-https://gamedevtycoon.fandom.com/wiki/Review_Algorithm/1.4.4#Combination_study
-
-
-q = 1
-MMOMOD=1 if MMO, 2 if not MMO
-
-t = (D * R - T)/max(T,D)
-D design
-T technic
-R ratio defined on data
-if |t|<= 0.25 -> q+0.1
-if |t|>0.5 -> q-0.1
-
-
->40% time allocation on design goal >= 0.9
-	on 2 phases -> q+0.2
-	on 1 phase -> q+0.1
-	never -> 1-(0.15*MMOMOD)
-
->40% time allocation on design goal < 0.8
-	2 ph -> q-0.2*MMOMOD
-	1 -> q-0.1*MMOMOD
-
-<20% design goal >=0.9:
-	(q-0.15*MMOMOD)*#phase
-
-multigenre: 2/3*q first + 1/3*q 2nd
-
-
-
-
-
-g = m * q * p * o * r * t
-p = platform/genre
-o = topic/audience
-
+Feel free to use this code or develop it to improve its functionality.

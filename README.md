@@ -14,10 +14,11 @@ The two scores to evaluate the different games are:
 Additionally, you can visualise the development values on the games found, which you can use to distribute the time on each phase.
 
 The formula and results obtained are based on version 1.6. And the information is obtained from the following links:
-[Topic/Genre values](https://gamedevtycoon.fandom.com/wiki/Raw_Data_for_Review_Algorithm/1.4.3#Topic_Genre_Combinations)
-[Topic/Audience values](https://gamedevtycoon.fandom.com/wiki/Raw_Data_for_Review_Algorithm/1.4.3#Topic_Audience_Combinations)
-[Genre/Development values](https://gamedevtycoon.fandom.com/wiki/Raw_Data_for_Review_Algorithm/1.4.3#Development_Weight_for_Tech_and_Design_Ratios)
-[Platform/Audience + Platform/Genre values](https://steamcommunity.com/sharedfiles/filedetails/?id=176835673)
+
+- [Topic/Genre values](https://gamedevtycoon.fandom.com/wiki/Raw_Data_for_Review_Algorithm/1.4.3#Topic_Genre_Combinations)
+- [Topic/Audience values](https://gamedevtycoon.fandom.com/wiki/Raw_Data_for_Review_Algorithm/1.4.3#Topic_Audience_Combinations)
+- [Genre/Development values](https://gamedevtycoon.fandom.com/wiki/Raw_Data_for_Review_Algorithm/1.4.3#Development_Weight_for_Tech_and_Design_Ratios)
+- [Platform/Audience + Platform/Genre values](https://steamcommunity.com/sharedfiles/filedetails/?id=176835673)
 
 Website deployed on [Render](https://community.render.com/t/how-to-host-a-simple-index-html-file-as-a-static-site/5734)
 

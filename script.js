@@ -424,7 +424,7 @@ function addScoresWebpage(scores, genre_dev_data){
   // detach previous shown results from parent
   var container_results = parentElement.getElementsByClassName('container-info');
   var resultsArray = Array.from(container_results);
-  resultsArray.forEach(function(result) {
+  resultsArray.slice(1).forEach(function(result) {
     parentElement.removeChild(result);
   });
 

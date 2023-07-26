@@ -32,7 +32,7 @@ topics = [
     'Hunting',
     'Law',
     'Life',
-    'Mad Sicence',
+    'Mad Science',
     'Martial Arts',
     'Medieval',
     'Military',

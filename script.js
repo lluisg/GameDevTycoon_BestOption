@@ -43,6 +43,8 @@ function createListButtons(parentElement, dataArray, nameClass) {
 
 
 function expandButtons(elementID, currentElementID, force_hide=false){
+  var screenWidth = window.innerWidth;
+
   let el = document.getElementById(elementID)
   let btn = document.getElementById(currentElementID)
   isHidden = el.classList.contains('hidden')
@@ -65,6 +67,33 @@ function expandButtons(elementID, currentElementID, force_hide=false){
   }
 }
 
+const allPlatBtn = document.getElementById("all-plat-btn");
+allPlatBtn.addEventListener("click", function() {
+  // Check the current value of the button
+  if (allPlatBtn.value === "off") {
+    // The button is currently toggled off, so we can toggle it on
+    allPlatBtn.value = "on";
+    console.log("Button is toggled ON");
+  } else {
+    // The button is currently toggled on, so we can toggle it off
+    allPlatBtn.value = "off";
+    console.log("Button is toggled OFF");
+  }
+});
+
+const allAudBtn = document.getElementById("all-aud-btn");
+allAudBtn.addEventListener("click", function() {
+  // Check the current value of the button
+  if (allAudBtn.value === "off") {
+    // The button is currently toggled off, so we can toggle it on
+    allAudBtn.value = "on";
+    console.log("Button is toggled ON");
+  } else {
+    // The button is currently toggled on, so we can toggle it off
+    allAudBtn.value = "off";
+    console.log("Button is toggled OFF");
+  }
+});
 
 // ----------------------------------- CALCULATE THE BEST GAMES TO DEVELOP -----------------------------------
 function saveButtonStates(className) {
@@ -147,7 +176,13 @@ function removeSameTopicGenre(scores){
   unique_games = []
   scores.forEach(element => {
     [score1, score2, platform, topic, genre, aud] = element
-    genretopic = genre +'/'+ topic
+    let genretopic = genre +'/'+ topic
+    if (allPlatBtn.value == "on"){ // defined more above
+      genretopic = genretopic+'/'+platform
+    }
+    if (allAudBtn.value == "on"){
+      genretopic = genretopic+'/'+aud
+    }
     if (!topics_used.includes(genretopic)){
       unique_games.push(element)
       topics_used.push(genretopic)
@@ -213,8 +248,6 @@ function CalculateGames(plat_genre_data, plat_aud_data, topic_genre_data, topic_
 var maxRecommended;
 function searchGames(){
   maxRecommended = document.getElementById('inputRecommend').value;
-
-
 
   statesBtnSys = saveButtonStates('sys-btn')
   statesBtnTpc = saveButtonStates('tpc-btn')

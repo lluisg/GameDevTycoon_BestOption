@@ -26,23 +26,28 @@ h1{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .option{
-  margin: 0 1rem;
+  margin-left: 1rem;
 }
 
 .container-numRecommend{
-  width: 180px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  width: 135px;
+  margin: 0;
+  padding: 0;
 }
-
+#optionRecommend{
+}
 #inputRecommend{
   width: 40px;
+  margin: 0;
+  padding: 0;
 }
 
 .show-all-x {
@@ -61,6 +66,34 @@ h1{
 .show-all-x[value="on"] {
   background-color: #007bff; /* Replace with your preferred color for the "on" state */
   color: #fff;
+}
+@media (max-width: 576px) {
+  .option{
+    margin: 0 0.6rem;
+  }
+  .show-all-x{
+    width: 100px;
+    padding: 10px 10px;
+  }
+}
+@media (max-width: 430px) {
+  .option{
+    margin: 0 0.3rem;
+  }
+  .show-all-x{
+    font-size: 0.5rem;
+    width: 70px;
+    padding: 10px 5px;
+  }
+}
+@media (max-width: 320px) {
+  .container-options{
+    flex-direction: column;
+    align-items: center;
+  }
+  .option{
+    margin: 0.2rem 0;
+  }
 }
 
 /* ------------------ HINTS ------------------ */
